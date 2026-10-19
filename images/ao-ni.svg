@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="420" viewBox="0 0 460 420">
+<title>Hình minh họa Áo nỉ cổ tròn</title>
+<defs>
+  <filter id="shadow" x="-35%" y="-25%" width="170%" height="180%"><feDropShadow dx="0" dy="13" stdDeviation="13" flood-color="#4b4035" flood-opacity=".15"/></filter>
+  <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ac8066"/><stop offset=".55" stop-color="#976d53"/><stop offset="1" stop-color="#80593f"/></linearGradient>
+  <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff" stop-opacity=".07"/><stop offset=".5" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#000" stop-opacity=".02"/></linearGradient>
+</defs><rect width="460" height="420" fill="#eeeae3"/>
+<ellipse cx="230" cy="348" rx="118" ry="13" fill="#d3ccc0" opacity=".25"/>
+<g filter="url(#shadow)">
+  <path d="M150 101 196 80Q230 94 264 80L310 101 363 292 320 309 285 203 293 328 286 349H174L167 328 175 203 140 309 97 292Z" fill="url(#cloth)" stroke="#795039" stroke-width="1.5"/>
+  <path d="M196 80Q230 114 264 80" fill="none" stroke="#674632" stroke-width="12"/>
+  <path d="M196 79Q230 108 264 79" fill="none" stroke="#b28a71" stroke-width="7"/>
+  <path d="m101 279 42 14-4 18-43-14Z M318 293l41-14 5 18-42 14Z M170 326q61 10 121 0l-5 23H174Z" fill="#7e563f"/>
+  <path d="m153 106 25 93m129-93-25 93M189 137l-1 172m85-172 1 172" fill="none" stroke="#c8a18a" stroke-opacity=".28" stroke-width="2"/>
+  <path d="M183 338h93" stroke="#b58d73" stroke-width="1" stroke-dasharray="2 4"/>
+</g></svg>

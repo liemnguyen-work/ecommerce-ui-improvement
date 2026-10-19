@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="420" viewBox="0 0 460 420">
+<title>Hình minh họa Áo sơ mi Oxford</title>
+<defs>
+  <filter id="shadow" x="-35%" y="-25%" width="170%" height="180%"><feDropShadow dx="0" dy="13" stdDeviation="13" flood-color="#4b4035" flood-opacity=".15"/></filter>
+  <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#92a6b5"/><stop offset=".55" stop-color="#7d96a9"/><stop offset="1" stop-color="#6e879a"/></linearGradient>
+  <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff" stop-opacity=".07"/><stop offset=".5" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#000" stop-opacity=".02"/></linearGradient>
+</defs><rect width="460" height="420" fill="#eeeae3"/>
+<ellipse cx="230" cy="348" rx="118" ry="13" fill="#d3ccc0" opacity=".25"/>
+<g filter="url(#shadow)">
+  <path d="M153 93 196 74H264L307 93 356 293 317 307 287 191 294 342Q231 357 166 342L173 191 143 307 104 293Z" fill="url(#cloth)" stroke="#627e91" stroke-width="1.5"/>
+  <path d="m197 73 33 26-25 37-25-42Z" fill="#9bb0bf" stroke="#6c879b"/>
+  <path d="m263 73-33 26 25 37 25-42Z" fill="#8aa2b5" stroke="#6c879b"/>
+  <path d="M230 99v246" stroke="#607d92" stroke-width="10"/><path d="M228 100v245" stroke="#a5b6c1" stroke-width="2"/>
+  <path d="M249 151h30v37q-14 13-30 0Z" fill="none" stroke="#5d7b91" stroke-width="1.5"/>
+  <path d="m108 280 38 13m169 0 37-13M170 331q59 13 121 0" fill="none" stroke="#a8bac7" stroke-width="3"/>
+  <g fill="#e9e7df"><circle cx="230" cy="142" r="2.8"/><circle cx="230" cy="181" r="2.8"/><circle cx="230" cy="220" r="2.8"/><circle cx="230" cy="259" r="2.8"/><circle cx="230" cy="298" r="2.8"/></g>
+</g></svg>

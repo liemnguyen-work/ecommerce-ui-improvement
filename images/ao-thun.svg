@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="420" viewBox="0 0 460 420">
+<title>Hình minh họa Áo thun cổ tròn</title>
+<defs>
+  <filter id="shadow" x="-35%" y="-25%" width="170%" height="180%"><feDropShadow dx="0" dy="13" stdDeviation="13" flood-color="#4b4035" flood-opacity=".15"/></filter>
+  <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ece5d7"/><stop offset=".55" stop-color="#e4dbca"/><stop offset="1" stop-color="#d8cdb8"/></linearGradient>
+  <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff" stop-opacity=".07"/><stop offset=".5" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#000" stop-opacity=".02"/></linearGradient>
+</defs><rect width="460" height="420" fill="#eeeae3"/>
+<ellipse cx="230" cy="348" rx="118" ry="13" fill="#d3ccc0" opacity=".25"/>
+<g filter="url(#shadow)">
+  <path d="M143 96 196 72Q230 91 264 72L317 96 366 164 318 195 292 164 292 338Q230 353 168 338L168 164 142 195 94 164Z" fill="url(#cloth)" stroke="#c9bda7" stroke-width="1.5"/>
+  <path d="M196 72Q230 113 264 72L254 68Q230 87 206 68Z" fill="#c4b89f"/>
+  <path d="M197 73Q230 105 263 73" fill="none" stroke="#f4eee2" stroke-width="8"/>
+  <path d="m148 103 29 58m135-58-29 58M169 326q60 12 122 0M103 161l38 24m178 0 38-24" fill="none" stroke="#c8baa1" stroke-opacity=".7" stroke-width="1.2"/>
+  <path d="M186 133q-8 82 1 190m93-190q9 81-1 190" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="8"/>
+</g></svg>
