@@ -1,0 +1,280 @@
+{
+  "performed_by": "AI Codex theo yêu cầu hỗ trợ của sinh viên",
+  "date": "2026-10-30",
+  "scope": "Chỉ tăng font-size dòng Tiết kiệm; kiểm tra viewport mô phỏng Chromium",
+  "before": [
+    {
+      "viewport": 1366,
+      "scrollWidth": 1366,
+      "columns": 4,
+      "savings": [
+        {
+          "text": "Tiết kiệm 98.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 37.5,
+          "textWidth": 103.5625,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 100.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 37.5,
+          "textWidth": 110.796875,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 150.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 37.5,
+          "textWidth": 110.796875,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 200.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 37.5,
+          "textWidth": 110.796875,
+          "contentFits": true
+        }
+      ],
+      "images": true
+    },
+    {
+      "viewport": 768,
+      "scrollWidth": 768,
+      "columns": 2,
+      "savings": [
+        {
+          "text": "Tiết kiệm 98.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 310,
+          "boxHeight": 37.5,
+          "textWidth": 103.5625,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 100.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 310,
+          "boxHeight": 37.5,
+          "textWidth": 110.796875,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 150.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 310,
+          "boxHeight": 37.5,
+          "textWidth": 110.796875,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 200.000đ",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "boxWidth": 310,
+          "boxHeight": 37.5,
+          "textWidth": 110.796875,
+          "contentFits": true
+        }
+      ],
+      "images": true
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "columns": 1,
+      "savings": [
+        {
+          "text": "Tiết kiệm 98.000đ",
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "boxWidth": 316,
+          "boxHeight": 39,
+          "textWidth": 111.53125,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 100.000đ",
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "boxWidth": 316,
+          "boxHeight": 39,
+          "textWidth": 119.328125,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 150.000đ",
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "boxWidth": 316,
+          "boxHeight": 39,
+          "textWidth": 119.328125,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 200.000đ",
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "boxWidth": 316,
+          "boxHeight": 39,
+          "textWidth": 119.328125,
+          "contentFits": true
+        }
+      ],
+      "images": true
+    }
+  ],
+  "after": [
+    {
+      "viewport": 1366,
+      "scrollWidth": 1366,
+      "columns": 4,
+      "savings": [
+        {
+          "text": "Tiết kiệm 98.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 40.5,
+          "textWidth": 119.5,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 100.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 40.5,
+          "textWidth": 127.84375,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 150.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 40.5,
+          "textWidth": 127.84375,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 200.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 265.5,
+          "boxHeight": 40.5,
+          "textWidth": 127.84375,
+          "contentFits": true
+        }
+      ],
+      "images": true
+    },
+    {
+      "viewport": 768,
+      "scrollWidth": 768,
+      "columns": 2,
+      "savings": [
+        {
+          "text": "Tiết kiệm 98.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 310,
+          "boxHeight": 40.5,
+          "textWidth": 119.5,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 100.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 310,
+          "boxHeight": 40.5,
+          "textWidth": 127.84375,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 150.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 310,
+          "boxHeight": 40.5,
+          "textWidth": 127.84375,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 200.000đ",
+          "fontSize": "15px",
+          "lineHeight": "22.5px",
+          "boxWidth": 310,
+          "boxHeight": 40.5,
+          "textWidth": 127.84375,
+          "contentFits": true
+        }
+      ],
+      "images": true
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "columns": 1,
+      "savings": [
+        {
+          "text": "Tiết kiệm 98.000đ",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "boxWidth": 316,
+          "boxHeight": 42,
+          "textWidth": 127.46875,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 100.000đ",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "boxWidth": 316,
+          "boxHeight": 42,
+          "textWidth": 136.359375,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 150.000đ",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "boxWidth": 316,
+          "boxHeight": 42,
+          "textWidth": 136.359375,
+          "contentFits": true
+        },
+        {
+          "text": "Tiết kiệm 200.000đ",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "boxWidth": 316,
+          "boxHeight": 42,
+          "textWidth": 136.359375,
+          "contentFits": true
+        }
+      ],
+      "images": true
+    }
+  ],
+  "limitations": [
+    "Chưa phải xác nhận sinh viên đã tự thao tác sửa mã.",
+    "Chưa kiểm tra trên thiết bị vật lý."
+  ],
+  "browser": "156.0.8078.49",
+  "errors": [],
+  "summary": "Cỡ chữ đúng ở 3 viewport; 4 dòng tiết kiệm ở mỗi viewport nằm trong khung; Grid giữ 4/2/1 cột; ảnh tải đúng; không ghi nhận tràn ngang hoặc lỗi tài nguyên."
+}

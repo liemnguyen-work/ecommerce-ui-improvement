@@ -52,6 +52,16 @@ Nội dung dưới đây là bản tóm lược trao đổi thực tế. Các c�
 
 **Kết quả:** Báo cáo có các chỗ trống để sinh viên điền ngày nộp, kết quả tự kiểm tra, một thay đổi độc lập, ảnh trước/sau của thay đổi đó, nhận xét cá nhân và ảnh GitHub. Những phần này không được ghi thành việc đã hoàn thành khi chưa thực hiện.
 
+### 2.6. Bổ sung cải tiến cỡ chữ dòng Tiết kiệm
+
+**Nội dung yêu cầu được tóm lược:** Sinh viên giao AI chủ động chọn một thay đổi phù hợp, thực hiện và ghi nhận kết quả để tiếp tục hoàn thiện bài.
+
+**AI hỗ trợ:** Chọn tăng cỡ chữ dòng Tiết kiệm để làm rõ thông tin ưu đãi. Trước khi sửa, chụp bản hiện tại tại viewport 1366, 768 và 390px. Sau đó đổi font-size của `.savings` cơ sở từ 13px thành 15px, và quy tắc dưới 600px từ 14px thành 16px.
+
+**Kết quả kiểm tra của AI:** Ở 1366px và 768px, computed style là 15px; ở 390px là 16px. Bốn dòng Tiết kiệm tại từng viewport đều nằm trong khung; Grid giữ 4/2/1 cột, ảnh tải được và không ghi nhận tràn ngang hoặc lỗi tài nguyên trong lượt thử. Ảnh trước/sau và dữ liệu nằm trong [minh-chung/dieu-chinh-font](minh-chung/dieu-chinh-font).
+
+Lượt chỉnh sửa và kiểm tra này do AI thực hiện theo yêu cầu hỗ trợ. Phần sinh viên tự thao tác và tự giải thích vẫn cần được xác nhận sau khi thực hành.
+
 ## 3. Kết quả AI đề xuất và cách đối chiếu
 
 - Giữ các thành phần HTML5, Flexbox, Grid và focus vốn đã có; không kết luận sai rằng bài cũ thiếu chúng.

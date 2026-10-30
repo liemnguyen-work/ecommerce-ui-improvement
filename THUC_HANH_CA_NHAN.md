@@ -1,31 +1,23 @@
-# Bài thực hành tự điều chỉnh trước khi nộp
+# Sinh viên thực hành trên phiên bản hiện tại
 
-Đề yêu cầu sinh viên tự phát hiện và sửa ít nhất một vấn đề. Code, kiểm thử và ảnh do AI chuẩn bị không thay thế yêu cầu này.
+## Phiên bản đang có
 
-## Một phương án ngắn để thực hành
+AI đã thực hiện cải tiến dòng Tiết kiệm theo yêu cầu hỗ trợ: `.savings` hiện là 15px ở quy tắc cơ sở và 16px dưới 600px. Ảnh trước/sau của lần thay đổi này nằm trong `minh-chung/dieu-chinh-font/`. Đây là thao tác có AI thực hiện, chưa xác nhận sinh viên tự sửa.
 
-1. Mở index.html, xem ở chiều rộng 1366px và tự đánh giá dòng Tiết kiệm.
-2. Chụp ảnh trước. Nếu thấy cần tăng độ rõ, mở css/style.css, tìm đúng quy tắc `.savings` cơ sở.
-3. Tự đổi `font-size: 13px` thành `font-size: 14px` trong quy tắc đó, lưu tệp rồi tải lại trang.
-4. Kiểm tra ở 1366px và 390px. Quy tắc mobile đã đặt 14px nên điện thoại có thể không đổi.
-5. Chụp ảnh sau; ghi nhận có vỡ dòng/tràn hay không. Chỉ giữ thay đổi nếu kết quả phù hợp.
+## Các bước tự kiểm tra và điều chỉnh
 
-Đây là gợi ý để sinh viên tự thực hiện, chưa được áp dụng vào gói ban đầu. Có thể chọn vấn đề khác thực sự quan sát được.
+1. Mở index.html và quan sát ở 1366, 768 và 390px.
+2. Đối chiếu font-size với css/style.css; giải thích vì sao ở điện thoại có quy tắc ghi đè.
+3. Chọn một điểm bản thân thực sự muốn cải thiện sau khi quan sát. Có thể thử khoảng cách giữa các kích cỡ hoặc padding, nếu thấy cần; không bắt buộc chọn một giá trị có sẵn.
+4. Chụp ảnh trước, tự sửa thuộc tính, lưu và tải lại trang.
+5. Kiểm tra lại, chụp ảnh sau và ghi đúng kết quả; giữ hoặc bỏ thay đổi theo kết quả quan sát.
 
-## Bổ sung sau khi làm
+## Ghi nhận sau khi thực hiện
 
-- Vấn đề bản thân phát hiện: [điền sau khi quan sát].
-- File và thuộc tính đã tự sửa: [điền].
-- Giá trị trước và sau: [điền].
-- Kết quả kiểm tra lại và viewport: [điền].
-- Ảnh minh chứng: [điền đường dẫn].
+- Vấn đề tôi tự phát hiện: [bổ sung].
+- Tệp và thuộc tính tôi tự sửa: [bổ sung].
+- Giá trị trước/sau và lý do: [bổ sung].
+- Kết quả kiểm tra lại và viewport: [bổ sung].
+- Ảnh minh chứng: [bổ sung].
 
-Sau khi có kết quả, cập nhật mục 4.3 và câu trả lời 6.7 trong báo cáo Word, AI_USAGE.md và KIEM_TRA.md. Các kết quả tự động hiện có mô tả bản trước thay đổi thủ công; kiểm tra lại phần bị tác động trước khi nộp.
-
-## Ôn sửa mã trực tiếp
-
-- Đổi padding: tìm `.product-content`; dự đoán nội dung cách mép nhiều hơn hay ít hơn.
-- Đổi màu giá: tìm `.current-price`; cân nhắc biến `--accent` ảnh hưởng nhiều thành phần.
-- Đổi số cột: tìm `.product-grid` và media query đang có hiệu lực.
-- Đổi khoảng cách menu: tìm `.nav-list`; ở mobile có quy tắc riêng.
-- Sửa alt: tìm đúng ảnh trong index.html và dùng mô tả nội dung ảnh.
+Cập nhật các phần này trong báo cáo và AI_USAGE.md sau khi thực hành. Khi giải thích, phân biệt phần AI hỗ trợ thực hiện với thao tác sinh viên tự làm.

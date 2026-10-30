@@ -32,3 +32,10 @@ AI đã chạy 12 nhóm kiểm tra ở 1366, 1024, 768, 390, 360 và 320px. Khô
 Xem [THUC_HANH_CA_NHAN.md](THUC_HANH_CA_NHAN.md) để tự chỉnh một điểm và bổ sung kết quả. AI chưa xác nhận sinh viên đã làm bước này. Tiếp tục repository Buổi 1; tải nội dung trong thư mục này vào gốc repository, không tải riêng tệp ZIP thay cho mã. Bản Buổi 2 cập nhật vào nhánh `main` của repository Buổi 1. Phần triển khai hoặc kiểm tra lại GitHub Pages chưa được thực hiện trong lượt cập nhật này.
 
 Repository: https://github.com/liemnguyen-work/ecommerce-ui-improvement. Các ảnh và dữ liệu kiểm thử được ghi trước bước upload GitHub; trạng thái chưa upload trong dữ liệu gốc phản ánh thời điểm đó. URL website nếu đã triển khai: sinh viên bổ sung sau khi xác nhận.
+
+
+## Điều chỉnh bổ sung dòng Tiết kiệm
+
+Theo yêu cầu hỗ trợ tiếp, AI tăng font-size của `.savings` từ 13 lên 15px ở quy tắc cơ sở và từ 14 lên 16px ở media query dưới 600px. Kiểm tra tại 1366, 768 và 390px xác nhận cỡ chữ đúng, dòng thông tin nằm trong khung, lưới vẫn 4/2/1 cột và không tràn ngang ở các viewport này.
+
+Ảnh trước/sau: [máy tính](minh-chung/dieu-chinh-font/so-sanh-1366.png), [điện thoại](minh-chung/dieu-chinh-font/so-sanh-390.png). Các ảnh và dữ liệu ban đầu được giữ lại; kết quả bổ sung ở `minh-chung/dieu-chinh-font/`. Tác giả thao tác và phương pháp kiểm tra được ghi trong AI_USAGE.md và KIEM_TRA.md.

@@ -37,3 +37,16 @@ Người thực hiện: AI Codex. Ngày 30/10/2026. Chromium headless, viewport 
 - Bản mẫu dùng giá tĩnh; khi thay giá phải cập nhật đồng thời mức tiết kiệm và tỷ lệ.
 - Dữ liệu gốc: minh-chung/ket-qua-kiem-thu.json.
 - Xem THUC_HANH_CA_NHAN.md để hoàn thành phần tự điều chỉnh.
+
+
+## Kiểm tra bổ sung sau khi tăng cỡ chữ dòng Tiết kiệm
+
+Người thực hiện: AI Codex theo yêu cầu hỗ trợ. Bảng 12 nhóm kiểm tra phía trên phản ánh bản trước lượt chỉnh cỡ chữ này; dưới đây là kiểm tra phần thay đổi. Dữ liệu: [ket-qua.json](minh-chung/dieu-chinh-font/ket-qua.json).
+
+| Viewport | Cỡ chữ trước | Cỡ chữ sau | Số cột | Kết quả |
+| --- | --- | --- | --- | --- |
+| 1366px | 13px | 15px | 4 | 4 dòng nằm trong khung; không tràn ngang |
+| 768px | 13px | 15px | 2 | 4 dòng nằm trong khung; không tràn ngang |
+| 390px | 14px | 16px | 1 | 4 dòng nằm trong khung; không tràn ngang |
+
+Ảnh tải đúng, không ghi nhận lỗi tài nguyên trong lượt kiểm tra. Ảnh đối chiếu: [máy tính](minh-chung/dieu-chinh-font/so-sanh-1366.png), [điện thoại](minh-chung/dieu-chinh-font/so-sanh-390.png). Đây là kiểm thử mô phỏng bằng Chromium; chưa phải xác nhận sinh viên tự sửa mã hoặc đã thử trên thiết bị vật lý.
