@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bản mẫu giao diện thời trang với giá cũ, giá mới và mức tiết kiệm rõ ràng. Bài tập HTML5 và CSS3 lấy cảm hứng từ khảo sát UNIQLO Việt Nam.">
-  <title>Mặc — Bộ sưu tập thiết yếu</title>
+  <title>Mặc | Bộ sưu tập thiết yếu</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,8 +14,10 @@
     <div class="container header-inner">
       <a class="wordmark" href="#dau-trang" aria-label="Mặc — đầu trang">mặc<span>.</span></a>
       <nav aria-label="Điều hướng chính">
-        <a class="nav-link" href="#san-pham">Bộ sưu tập</a>
-        <a class="nav-link" href="#ve-ban-mau">Về bản mẫu</a>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#san-pham">Bộ sưu tập</a></li>
+          <li><a class="nav-link" href="#ve-ban-mau">Về bản mẫu</a></li>
+        </ul>
       </nav>
       <span class="header-note">DAILY ESSENTIALS</span>
     </div>
@@ -48,7 +50,13 @@
         <div class="product-content">
           <p class="product-category">COTTON ESSENTIAL</p>
           <h3 id="ao-thun-title">Áo thun cổ tròn</h3>
-          <p class="product-color">Kem tự nhiên <span aria-hidden="true">·</span> S · M · L · XL</p>
+          <p class="product-color">Kem tự nhiên</p>
+          <div class="product-sizes">
+            <span class="size-label">Kích cỡ minh họa</span>
+            <ul class="size-list" aria-label="Kích cỡ minh họa, không phải bộ chọn">
+              <li>S</li><li>M</li><li>L</li><li>XL</li>
+            </ul>
+          </div>
           <div class="price-block">
             <p class="current-price"><span class="visually-hidden">Giá hiện tại: </span>293.000đ</p>
             <p class="previous-price">Giá trước đây <del>391.000đ</del></p>
@@ -56,7 +64,7 @@
           <p class="savings">Tiết kiệm <strong>98.000đ</strong></p>
           <details class="product-details">
             <summary>Xem chi tiết <span class="details-icon" aria-hidden="true">+</span></summary>
-            <div class="details-content"><p>Phom áo cơ bản, cổ tròn và gam kem dễ kết hợp với quần jeans hoặc quần vải.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p></div>
+            <div class="details-content"><p>Phom áo cơ bản, cổ tròn và gam kem dễ kết hợp với quần jeans hoặc quần vải.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p><a class="product-image-link" href="images/ao-thun.svg" aria-label="Xem ảnh minh họa Áo thun cổ tròn">Xem ảnh minh họa <span aria-hidden="true">↗</span></a></div>
           </details>
         </div>
       </article>
@@ -68,7 +76,13 @@
         <div class="product-content">
           <p class="product-category">EVERYDAY LAYERS</p>
           <h3 id="so-mi-title">Áo sơ mi Oxford</h3>
-          <p class="product-color">Xanh khói <span aria-hidden="true">·</span> S · M · L · XL</p>
+          <p class="product-color">Xanh khói</p>
+          <div class="product-sizes">
+            <span class="size-label">Kích cỡ minh họa</span>
+            <ul class="size-list" aria-label="Kích cỡ minh họa, không phải bộ chọn">
+              <li>S</li><li>M</li><li>L</li><li>XL</li>
+            </ul>
+          </div>
           <div class="price-block">
             <p class="current-price"><span class="visually-hidden">Giá hiện tại: </span>399.000đ</p>
             <p class="previous-price">Giá trước đây <del>499.000đ</del></p>
@@ -76,7 +90,7 @@
           <p class="savings">Tiết kiệm <strong>100.000đ</strong></p>
           <details class="product-details">
             <summary>Xem chi tiết <span class="details-icon" aria-hidden="true">+</span></summary>
-            <div class="details-content"><p>Thiết kế cổ bẻ, hàng cúc phía trước và túi ngực. Có thể mặc riêng hoặc khoác ngoài áo thun.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p></div>
+            <div class="details-content"><p>Thiết kế cổ bẻ, hàng cúc phía trước và túi ngực. Có thể mặc riêng hoặc khoác ngoài áo thun.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p><a class="product-image-link" href="images/so-mi.svg" aria-label="Xem ảnh minh họa Áo sơ mi Oxford">Xem ảnh minh họa <span aria-hidden="true">↗</span></a></div>
           </details>
         </div>
       </article>
@@ -88,7 +102,13 @@
         <div class="product-content">
           <p class="product-category">SOFT & SIMPLE</p>
           <h3 id="ao-ni-title">Áo nỉ cổ tròn</h3>
-          <p class="product-color">Nâu hạt dẻ <span aria-hidden="true">·</span> S · M · L · XL</p>
+          <p class="product-color">Nâu hạt dẻ</p>
+          <div class="product-sizes">
+            <span class="size-label">Kích cỡ minh họa</span>
+            <ul class="size-list" aria-label="Kích cỡ minh họa, không phải bộ chọn">
+              <li>S</li><li>M</li><li>L</li><li>XL</li>
+            </ul>
+          </div>
           <div class="price-block">
             <p class="current-price"><span class="visually-hidden">Giá hiện tại: </span>449.000đ</p>
             <p class="previous-price">Giá trước đây <del>599.000đ</del></p>
@@ -96,7 +116,7 @@
           <p class="savings">Tiết kiệm <strong>150.000đ</strong></p>
           <details class="product-details">
             <summary>Xem chi tiết <span class="details-icon" aria-hidden="true">+</span></summary>
-            <div class="details-content"><p>Phom thoải mái với cổ, cổ tay và gấu bo. Tông nâu phù hợp với các trang phục trung tính.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p></div>
+            <div class="details-content"><p>Phom thoải mái với cổ, cổ tay và gấu bo. Tông nâu phù hợp với các trang phục trung tính.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p><a class="product-image-link" href="images/ao-ni.svg" aria-label="Xem ảnh minh họa Áo nỉ cổ tròn">Xem ảnh minh họa <span aria-hidden="true">↗</span></a></div>
           </details>
         </div>
       </article>
@@ -108,7 +128,13 @@
         <div class="product-content">
           <p class="product-category">LIGHT OUTERWEAR</p>
           <h3 id="ao-khoac-title">Áo khoác nhẹ</h3>
-          <p class="product-color">Xanh olive <span aria-hidden="true">·</span> S · M · L · XL</p>
+          <p class="product-color">Xanh olive</p>
+          <div class="product-sizes">
+            <span class="size-label">Kích cỡ minh họa</span>
+            <ul class="size-list" aria-label="Kích cỡ minh họa, không phải bộ chọn">
+              <li>S</li><li>M</li><li>L</li><li>XL</li>
+            </ul>
+          </div>
           <div class="price-block">
             <p class="current-price"><span class="visually-hidden">Giá hiện tại: </span>799.000đ</p>
             <p class="previous-price">Giá trước đây <del>999.000đ</del></p>
@@ -116,7 +142,7 @@
           <p class="savings">Tiết kiệm <strong>200.000đ</strong></p>
           <details class="product-details">
             <summary>Xem chi tiết <span class="details-icon" aria-hidden="true">+</span></summary>
-            <div class="details-content"><p>Áo khoác cổ đứng, khóa kéo phía trước và hai túi bên. Thiết kế gọn cho những ngày cần thêm một lớp áo.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p></div>
+            <div class="details-content"><p>Áo khoác cổ đứng, khóa kéo phía trước và hai túi bên. Thiết kế gọn cho những ngày cần thêm một lớp áo.</p><p>Đây là sản phẩm minh họa. Màu sắc và kích cỡ được dùng để trình bày giao diện.</p><a class="product-image-link" href="images/ao-khoac.svg" aria-label="Xem ảnh minh họa Áo khoác nhẹ">Xem ảnh minh họa <span aria-hidden="true">↗</span></a></div>
           </details>
         </div>
       </article>

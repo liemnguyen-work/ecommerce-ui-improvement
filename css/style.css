@@ -25,7 +25,8 @@ p, h1, h2, h3 { margin: 0; }
 .header-inner { display: flex; align-items: center; min-height: 82px; gap: 60px; }
 .wordmark { font-weight: 800; font-size: 38px; letter-spacing: -2px; line-height: 1; padding-block: 10px; }
 .wordmark span { color: var(--accent); }
-nav { display: flex; gap: 30px; }
+/* Danh sách điều hướng có ngữ nghĩa; Flexbox đặt trên phần tử cha ul. */
+.nav-list { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin: 0; padding: 0; list-style: none; }
 .nav-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
 .nav-link:hover, .site-footer a:hover { color: var(--accent); }
 .header-note { margin-left: auto; font-size: 10px; letter-spacing: 2.5px; color: var(--muted); }
@@ -44,34 +45,44 @@ h2 { font-size: 24px; font-weight: 600; letter-spacing: -.6px; }
 .collection-heading h2 { margin-top: 5px; }
 .product-count { flex-shrink: 0; color: var(--muted); font-size: 12px; padding-bottom: 4px; }
 .product-count span { padding-inline: 10px; color: #b1b0a8; }
-.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; align-items: start; }
-.product-card { min-width: 0; background: white; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.product-card { display: flex; flex-direction: column; min-width: 0; background: white; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .product-image { position: relative; overflow: hidden; background: #eeeae3; }
 .product-image img { width: 100%; height: auto; aspect-ratio: 460 / 420; object-fit: cover; transition: transform .22s ease; }
 .product-card:hover .product-image img { transform: scale(1.025); }
 .discount-badge { position: absolute; top: 14px; right: 14px; padding: 5px 9px; color: #fff; background: var(--accent); border-radius: 2px; font-size: 12px; font-weight: 700; line-height: 1.5; }
-.product-content { padding: 18px; }
-.product-category { font-size: 9px; letter-spacing: 1.2px; color: var(--muted); }
+/* Box Model: padding nằm trong thẻ; margin tạo khoảng cách giữa các nhóm. */
+.product-content { display: flex; flex-direction: column; flex: 1; padding: 18px; }
+.product-category { font-size: 11px; letter-spacing: 1.2px; color: var(--muted); }
 h3 { margin-top: 6px; min-height: 50px; font-size: 18px; font-weight: 600; line-height: 1.4; letter-spacing: -.3px; overflow-wrap: anywhere; }
-.product-color { min-height: 37px; margin-top: 4px; font-size: 11px; color: var(--muted); line-height: 1.6; }
-.product-color span { padding-inline: 4px; }
+.product-color { margin-top: 4px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.product-sizes { margin-top: 12px; }
+.size-label { display: block; margin-bottom: 6px; font-size: 11px; color: var(--muted); }
+/* Flexbox cho nhóm kích cỡ; li chỉ hiển thị dữ liệu, không giả làm nút chọn. */
+.size-list { display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.size-list li { min-width: 32px; padding: 3px 7px; border: 1px solid var(--line); border-radius: 3px; text-align: center; font-size: 12px; line-height: 1.5; }
 .price-block { margin-top: 13px; }
 .current-price { font-size: 25px; font-weight: 700; color: var(--accent); line-height: 1.25; letter-spacing: -.5px; font-variant-numeric: tabular-nums; }
-.previous-price { margin-top: 6px; font-size: 11px; line-height: 1.5; color: var(--muted); }
+.previous-price { margin-top: 6px; font-size: 13px; line-height: 1.5; color: var(--muted); }
 .previous-price del { margin-left: 5px; }
-.savings { margin-top: 15px; padding: 9px 8px; background: var(--soft-accent); color: #873024; font-size: 12px; text-align: center; border-radius: 2px; }
+.savings { margin-top: 15px; padding: 9px 8px; background: var(--soft-accent); color: #873024; font-size: 13px; text-align: center; border-radius: 2px; }
 .savings strong { white-space: nowrap; }
-.collection-note { margin-top: 18px; font-size: 11px; color: var(--muted); }
+.collection-note { margin-top: 18px; font-size: 12px; color: var(--muted); }
 
 /* 4. Chi tiết mở bằng HTML gốc, không cần JavaScript */
-.product-details { margin-top: 16px; }
-.product-details summary { display: flex; align-items: center; justify-content: center; gap: 16px; list-style: none; min-height: 44px; padding: 10px 12px; border: 1px solid var(--ink); border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.product-details { margin-top: auto; padding-top: 16px; }
+.product-details summary { display: flex; align-items: center; justify-content: center; gap: 16px; list-style: none; min-height: 44px; padding: 10px 12px; border: 1px solid var(--ink); border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
 .product-details summary::-webkit-details-marker { display: none; }
 .product-details summary:hover, .product-details[open] summary { background: var(--ink); color: white; }
 .details-icon { font-size: 19px; font-weight: 400; line-height: 1; transition: transform .15s ease; }
 .product-details[open] .details-icon { transform: rotate(45deg); }
 .details-content { padding-top: 13px; color: var(--muted); font-size: 12px; line-height: 1.65; }
 .details-content p + p { margin-top: 9px; font-size: 11px; }
+
+/* Liên kết mở ảnh thật; không cần tạo thêm trang chi tiết hoặc JavaScript. */
+.product-image-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; margin-top: 10px; padding: 8px 10px; border-radius: 3px; color: var(--accent); font-weight: 600; transition: background-color .2s ease; }
+.product-image-link:hover { background: var(--soft-accent); text-decoration: underline; }
+.product-image-link:focus-visible { outline-offset: 2px; }
 
 /* 5. Ghi chú và chân trang */
 .demo-note { margin-top: 40px; padding-block: 22px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 230px 1fr; gap: 24px; }
@@ -95,7 +106,7 @@ h3 { margin-top: 6px; min-height: 50px; font-size: 18px; font-weight: 600; line-
   .container { width: calc(100% - 32px); }
   .header-inner { min-height: 68px; justify-content: space-between; gap: 16px; }
   .wordmark { font-size: 33px; }
-  nav { gap: 18px; }
+  .nav-list { gap: 18px; }
   .nav-link { font-size: 12px; }
   .header-note, .intro-note, .desktop-break { display: none; }
   .intro { padding-block: 29px 28px; }

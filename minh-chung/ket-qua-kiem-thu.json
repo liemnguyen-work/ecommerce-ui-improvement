@@ -1,0 +1,367 @@
+{
+  "performed_by": "AI Codex",
+  "method": "Chromium headless, viewport mô phỏng; không phải thiết bị vật lý",
+  "date": "2026-10-30",
+  "checks": [
+    {
+      "name": "HTML có 4 sản phẩm; ảnh và alt đầy đủ; CSS tải đúng; lưới 4/2/1 cột, không tràn ngang",
+      "result": "Đạt"
+    },
+    {
+      "name": "Box Model và Flexbox",
+      "result": "Đạt",
+      "before": {
+        "category": "9px",
+        "oldPrice": "11px",
+        "summaryTransition": "0s"
+      },
+      "after": {
+        "viewport": 1366,
+        "scrollWidth": 1366,
+        "columns": 4,
+        "images": [
+          {
+            "loaded": true,
+            "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+          },
+          {
+            "loaded": true,
+            "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+          },
+          {
+            "loaded": true,
+            "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+          },
+          {
+            "loaded": true,
+            "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+          }
+        ],
+        "heights": [
+          653,
+          653,
+          653,
+          653
+        ],
+        "sizeFlex": "flex",
+        "cardPadding": "18px",
+        "category": "11px",
+        "previousPrice": "13px"
+      }
+    },
+    {
+      "name": "Hover và transition của summary",
+      "result": "Đạt",
+      "normal": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(34, 35, 32)",
+        "transition": "0.2s, 0.2s, 0.2s"
+      },
+      "hover": {
+        "background": "rgb(34, 35, 32)",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    {
+      "name": "Dùng Tab đến summary và hiển thị focus-visible",
+      "result": "Đạt",
+      "visible": true,
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "name": "4 mục chi tiết mở bằng HTML gốc; Enter mở/đóng; 4 liên kết ảnh mở đúng SVG",
+      "result": "Đạt"
+    },
+    {
+      "name": "Liên kết điều hướng nội trang có đích và hoạt động",
+      "result": "Đạt",
+      "links": [
+        {
+          "href": "#san-pham",
+          "exists": true
+        },
+        {
+          "href": "#dau-trang",
+          "exists": true
+        },
+        {
+          "href": "#san-pham",
+          "exists": true
+        },
+        {
+          "href": "#ve-ban-mau",
+          "exists": true
+        },
+        {
+          "href": "#dau-trang",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "name": "4 phép tính tiết kiệm và tỷ lệ làm tròn",
+      "result": "Đạt",
+      "prices": [
+        {
+          "now": 293000,
+          "old": 391000,
+          "savings": 98000,
+          "percent": 25
+        },
+        {
+          "now": 399000,
+          "old": 499000,
+          "savings": 100000,
+          "percent": 20
+        },
+        {
+          "now": 449000,
+          "old": 599000,
+          "savings": 150000,
+          "percent": 25
+        },
+        {
+          "now": 799000,
+          "old": 999000,
+          "savings": 200000,
+          "percent": 20
+        }
+      ]
+    },
+    {
+      "name": "prefers-reduced-motion tắt chuyển động",
+      "result": "Đạt",
+      "transition": "0s"
+    },
+    {
+      "name": "Thử bỏ Grid để trả lời câu hỏi kiến thức",
+      "result": "Đạt",
+      "observed": {
+        "display": "block",
+        "firstWidth": 1280,
+        "parentWidth": 1280
+      }
+    },
+    {
+      "name": "Mở trực tiếp index.html qua file://, CSS và ảnh tải đúng",
+      "result": "Đạt"
+    },
+    {
+      "name": "Không lỗi tải tài nguyên, không lỗi JavaScript, không yêu cầu mạng ngoài",
+      "result": "Đạt",
+      "issues": [],
+      "remote": []
+    },
+    {
+      "name": "HTML5 và CSS3 thuần, không script hoặc framework",
+      "result": "Đạt"
+    }
+  ],
+  "viewports": [
+    {
+      "viewport": 1366,
+      "scrollWidth": 1366,
+      "columns": 4,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+        }
+      ],
+      "heights": [
+        653,
+        653,
+        653,
+        653
+      ],
+      "sizeFlex": "flex",
+      "cardPadding": "18px",
+      "category": "11px",
+      "previousPrice": "13px"
+    },
+    {
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "columns": 4,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+        }
+      ],
+      "heights": [
+        577,
+        577,
+        577,
+        577
+      ],
+      "sizeFlex": "flex",
+      "cardPadding": "18px",
+      "category": "11px",
+      "previousPrice": "13px"
+    },
+    {
+      "viewport": 768,
+      "scrollWidth": 768,
+      "columns": 2,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+        }
+      ],
+      "heights": [
+        694,
+        694,
+        694,
+        694
+      ],
+      "sizeFlex": "flex",
+      "cardPadding": "18px",
+      "category": "11px",
+      "previousPrice": "13px"
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "columns": 1,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+        }
+      ],
+      "heights": [
+        701,
+        701,
+        701,
+        701
+      ],
+      "sizeFlex": "flex",
+      "cardPadding": "20px",
+      "category": "11px",
+      "previousPrice": "12px"
+    },
+    {
+      "viewport": 360,
+      "scrollWidth": 360,
+      "columns": 1,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+        }
+      ],
+      "heights": [
+        673,
+        673,
+        673,
+        673
+      ],
+      "sizeFlex": "flex",
+      "cardPadding": "20px",
+      "category": "11px",
+      "previousPrice": "12px"
+    },
+    {
+      "viewport": 320,
+      "scrollWidth": 320,
+      "columns": 1,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo thun cổ tròn màu kem tự nhiên"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo sơ mi oxford màu xanh khói"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo nỉ cổ tròn màu nâu hạt dẻ"
+        },
+        {
+          "loaded": true,
+          "alt": "Hình minh họa áo khoác nhẹ màu xanh olive"
+        }
+      ],
+      "heights": [
+        637,
+        637,
+        637,
+        637
+      ],
+      "sizeFlex": "flex",
+      "cardPadding": "20px",
+      "category": "11px",
+      "previousPrice": "12px"
+    }
+  ],
+  "limitations": [
+    "Chưa kiểm tra trên điện thoại vật lý hoặc nhiều trình duyệt.",
+    "Chưa xác nhận sinh viên tự sửa một vấn đề.",
+    "Chưa cập nhật repository GitHub hoặc triển khai lại website."
+  ],
+  "browser": "156.0.8078.49"
+}

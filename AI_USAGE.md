@@ -1,71 +1,29 @@
-# AI Usage Log
+# AI Usage Log Buổi 2
 
-## 1 Công cụ AI
+## Công cụ và mục đích
 
-ChatGPT/Codex.
+ChatGPT/Codex hỗ trợ đọc đề, phân tích mã cũ, viết HTML/CSS, chạy kiểm tra bằng Chromium, chụp ảnh và chuẩn bị báo cáo. Thực hiện ngày 30/10/2026.
 
-## 2 Mục đích sử dụng
+## Prompt thực tế
 
-Đọc yêu cầu bài tập, hỗ trợ khảo sát UNIQLO Việt Nam, đối chiếu nhận xét với hình ảnh thực tế, đề xuất cải tiến thẻ sản phẩm, tạo và giải thích HTML/CSS, kiểm tra bản mẫu và chuẩn bị tài liệu cho GitHub.
+1. “Giờ quay lại BT cá nhân buổi 2, hướng dẫn mình chi tiết làm nha, và trình bày vào word gồm mục lục những phần nàio”.
+2. “giờ bạn làm full hết phần code trước rồi ghi nhận báo cáo được không?”
 
-## 3 Prompt đã sử dụng
+Các prompt mẫu trong đề chỉ là gợi ý; không ghi chúng thành nguyên văn lời đã gửi nếu chưa sử dụng.
 
-Các yêu cầu chính thực tế trong cuộc trò chuyện:
+## Kết quả và đối chiếu
 
-1. “Giờ tới bài tập cá nhân bạn ơi, đọc kĩ giúp mình và hướng dẫn nha” kèm tài liệu BaiTap_CaNhan_Chuong1.pdf.
-2. “mình chọn của uniqlo nha: https://www.uniqlo.com/vn/vi/”
-3. “cái này bạn làm cho mình luôn đi” sau phần trao đổi về khảo sát website và lưu minh chứng.
-4. “Rồi giờ trình bày luôn nha, chỗ nào cần hình thì nói mình nha để mình lấy hình từ file bạn”.
-5. Sinh viên yêu cầu tiếp Nhiệm vụ 2 và gửi ảnh prompt mẫu phân tích năm khu vực. AI cụ thể hóa mẫu cho UNIQLO và tổng hợp kết quả trên các minh chứng đã có.
-6. Sinh viên gửi năm ảnh yêu cầu Nhiệm vụ 3 về xác định vấn đề, đề xuất giao diện, tạo mã và kiểm tra. AI tạo bản mẫu dựa trên hướng cải tiến đã trao đổi.
-7. “bạn ghi lun i” khi trao đổi về mục tự điều chỉnh; AI đưa ví dụ tăng cỡ chữ dòng Tiết kiệm. Đây là đề xuất, chưa phải thay đổi đã được sinh viên xác nhận thực hiện.
-8. “Tiếp nha, còn lại bạn đọc tiếp trong file mình ko chụp nữa” kèm các ảnh yêu cầu Nhiệm vụ 4.
+- Đối chiếu trực tiếp bản Buổi 1: đã có semantic HTML, Flexbox, Grid, hover và focus; không nhận xét rằng các kỹ thuật này còn thiếu.
+- Ghi nhận 3 điểm cải thiện thực tế: chữ phụ nhỏ (9px và 11px); kích cỡ chung đoạn văn với màu; summary chưa có transition cho nền/chữ.
+- Giữ thương hiệu học tập Mặc và tài nguyên cũ; bổ sung ul/li, Flexbox cho kích cỡ, tăng cỡ chữ, transition và liên kết ảnh.
+- Các ô kích cỡ được giữ là thông tin tĩnh vì chưa có chức năng chọn biến thể.
+- Không thêm liên kết product-detail.html giả; liên kết mở SVG có thật.
+- Kiểm tra 12 nhóm, dữ liệu gốc và ảnh trong minh-chung; không ghi số liệu này là kiểm thử do sinh viên tự làm.
 
-Các prompt đầy đủ trình bày trong báo cáo Word là bản cụ thể hóa theo mẫu của đề. Không nhầm chúng với nguyên văn các yêu cầu ngắn hoặc các ảnh thực tế đã gửi ở trên.
+## Sinh viên cần tự xác nhận
 
-## 4 Kết quả AI đề xuất
+Chưa có xác nhận sinh viên tự sửa một điểm hoặc tự chạy các bước kiểm thử. Đọc THUC_HANH_CA_NHAN.md, thực hiện, chụp ảnh và ghi kết quả. Sau khi chuẩn bị và kiểm thử, sinh viên yêu cầu “giờ bạn đây lên github giúp mình lun”. AI thực hiện cập nhật mã và minh chứng vào repository Buổi 1 bằng Git. Chưa thực hiện bước triển khai hoặc kiểm tra lại GitHub Pages.
 
-- Phân tích năm khu vực: trang chủ, danh mục, chi tiết, tìm kiếm và giỏ hàng.
-- Chọn cải tiến bổ sung mức tiết kiệm và tỷ lệ giảm vào thẻ sản phẩm.
-- Tạo bốn sản phẩm mẫu, giá minh họa và hình SVG riêng.
-- Tách HTML/CSS; dùng CSS Grid và media query cho bố cục bốn, hai hoặc một cột.
-- Dùng details/summary để mở và đóng mô tả bằng HTML gốc.
-- Chuẩn bị README, nhật ký AI và báo cáo. Việc tạo repository và triển khai website chưa được xác nhận.
+## Các phần cần hiểu để giải thích
 
-## 5 Kiểm tra và điều chỉnh
-
-### Phần AI đã kiểm tra hoặc loại bỏ
-
-- UNIQLO đã có giá mới và giá cũ gạch ngang; loại bỏ nhận xét cho rằng website chưa phân biệt hai mức giá.
-- Một biến thể sản phẩm hết hàng không đồng nghĩa toàn bộ sản phẩm hết hàng.
-- Tìm kiếm không có kết quả vẫn có lối tìm khác; không ghi rằng trang không hướng dẫn tiếp tục.
-- Bản mẫu có đủ bốn sản phẩm, ảnh có alt và các đường dẫn tài nguyên tồn tại.
-- Bốn phép trừ giá và tỷ lệ giảm làm tròn khớp dữ liệu hiển thị.
-- Kiểm tra viewport 320, 360, 390, 768, 1024 và 1440px: không ghi nhận tràn ngang.
-- Cả bốn mô tả mở được bằng chuột và đóng được bằng Enter.
-
-### Phần sinh viên kiểm tra và điều chỉnh
-
-Chưa có xác nhận sinh viên đã tự chạy hoặc sửa mã. Cần bổ sung sau khi thực hiện: vấn đề bản thân phát hiện, file đã sửa, thay đổi cụ thể, ảnh hoặc kết quả kiểm tra lại. Không ghi ví dụ tăng cỡ chữ Tiết kiệm thành việc đã hoàn thành nếu chưa sửa.
-
-## 6 Phần tôi hiểu và có thể giải thích
-
-Danh sách dưới đây là các nội dung đã được AI giải thích để sinh viên đọc lại và tự xác nhận mức hiểu, chưa phải bằng chứng rằng sinh viên đã nắm vững:
-
-- header, nav, main, section và footer: phân chia các khu vực của trang.
-- article: một thẻ sản phẩm.
-- img và alt: ảnh minh họa và mô tả thay thế.
-- del: biểu thị giá trước đây.
-- details và summary: mở/đóng mô tả bằng HTML gốc.
-- .product-grid và grid-template-columns: chia số cột.
-- minmax(0, 1fr): giúp cột co lại mà không bị nội dung đẩy tràn.
-- @media: thay đổi bố cục theo chiều rộng màn hình.
-- .savings và font-size: định dạng dòng tiết kiệm và cỡ chữ.
-
-Sau khi tự đọc hoặc chỉnh mã, sinh viên cập nhật mục này theo đúng những phần mình có thể giải thích.
-
-## 7 Giới hạn và trạng thái
-
-Trang tĩnh, không có backend, cơ sở dữ liệu hoặc giỏ hàng động. Giá trị tiết kiệm được viết sẵn; khi đổi giá phải sửa đồng thời mức tiết kiệm và tỷ lệ. Chưa thử điện thoại vật lý, nhiều trình duyệt hoặc đo hiệu quả với người dùng. Kiểm tra bản xem trước được thực hiện qua HTTP; sinh viên cần xác nhận mở trực tiếp index.html trên máy.
-
-Gói này chỉ chuẩn bị mã nguồn và tài liệu. Chưa có bằng chứng repository Public, commit từ tài khoản sinh viên hoặc GitHub Pages đã được tạo.
+Vai trò article, ul/li, img/alt, details/summary; CSS selector; margin/padding/border-box; Flexbox với hai trục; Grid 4/2/1; hover/focus; responsive; đường dẫn tương đối. Danh sách này là nội dung đã giải thích, không phải xác nhận sinh viên đã nắm vững.
