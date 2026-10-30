@@ -16,23 +16,24 @@ Mở index.html sau khi giải nén, giữ css/ và images/ cùng cấp. Đã ki
 - Details/summary mở mô tả bằng HTML gốc; liên kết mở ảnh SVG có thật.
 - Hover, transition 0,2 giây, focus-visible và hỗ trợ giảm chuyển động.
 - Cỡ chữ phụ được tăng; dòng Tiết kiệm hiện 15px ở quy tắc cơ sở và 16px dưới 600px.
+- Bổ sung thao tác sinh viên tự sửa theo hướng dẫn: dòng Giá trước đây trên điện thoại từ 12px lên 14px; máy tính giữ 13px.
 
 ## Kiểm tra và tài liệu
 
-Lượt kiểm tra cuối có 12 nhóm ở 1366, 1024, 768, 390, 360 và 320px. Không ghi nhận tràn ngang tại các viewport đó; ảnh tải được, liên kết hoạt động, hover/focus/Enter và phép tính giá khớp trong các thao tác đã thử.
+Lượt kiểm tra trước bước thực hành cá nhân có 12 nhóm ở 1366, 1024, 768, 390, 360 và 320px. Không ghi nhận tràn ngang tại các viewport đó; ảnh tải được, liên kết hoạt động, hover/focus/Enter và phép tính giá khớp trong các thao tác đã thử.
 
 - [Kết quả kiểm tra](KIEM_TRA.md).
 - [Nhật ký AI theo công việc kỹ thuật](AI_USAGE.md).
 - [Bảy câu hỏi kiến thức](CAU_HOI_KIEN_THUC.md).
 - [Đối chiếu toàn bộ yêu cầu](DOI_CHIEU_YEU_CAU.md).
-- [Dữ liệu kiểm tra hiện tại](minh-chung/kiem-tra-cuoi/ket-qua-kiem-thu.json).
+- [Dữ liệu trước bước tự sửa](minh-chung/kiem-tra-cuoi/ket-qua-kiem-thu.json).
 - [Ảnh trước và sau tăng cỡ chữ trên máy tính](minh-chung/dieu-chinh-font/so-sanh-1366.png).
 - [Ảnh trước và sau trên điện thoại](minh-chung/dieu-chinh-font/so-sanh-390.png).
 
-Các thư mục minh-chung cũ được giữ làm lịch sử. Bản mã hiện tại được kiểm tra theo thư mục kiem-tra-cuoi. Báo cáo Word cập nhật được cung cấp cùng gói bài tập; trạng thái kỹ thuật và phần thực hành cá nhân được phân biệt trong bảng đối chiếu.
+Các thư mục minh-chung cũ được giữ làm lịch sử. Sau bước thực hành cá nhân, dùng [ảnh sinh viên gửi](minh-chung/sinh-vien-tu-sua/so-sanh-390.png) và [kiểm tra sau đồng bộ](minh-chung/sinh-vien-tu-sua/kiem-tra-sau-dong-bo.json). Lượt kiểm tra mới xác nhận 14px trên điện thoại, 13px trên máy tính; bốn dòng giá không tràn hoặc xuống dòng tại sáu viewport. Báo cáo Word được cập nhật từ cùng minh chứng.
 
 ## Phạm vi hoàn thành
 
-Mã và tài liệu được tạo, kiểm tra với sự hỗ trợ của AI. Yêu cầu sinh viên tự phát hiện và sửa một vấn đề chưa hoàn thành; xem THUC_HANH_CA_NHAN.md. Chưa xác nhận triển khai lại GitHub Pages hoặc thử trên thiết bị vật lý.
+Mã và tài liệu được tạo, kiểm tra với sự hỗ trợ của AI. Sinh viên đã bổ sung thao tác tự sửa theo hướng dẫn và gửi ảnh trước sau; xem THUC_HANH_CA_NHAN.md. Bảng đối chiếu ghi đúng phạm vi hỗ trợ và minh chứng. Chưa xác nhận triển khai lại GitHub Pages hoặc thử trên thiết bị vật lý.
 
 Repository: https://github.com/liemnguyen-work/ecommerce-ui-improvement. Tiếp tục dùng nhánh main và giữ lịch sử Buổi 1.

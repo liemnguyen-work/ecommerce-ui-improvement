@@ -1,4 +1,4 @@
-# Kết quả kiểm thử cuối Buổi 2
+# Kết quả kiểm thử Buổi 2
 
 Người chạy: AI Codex. Ngày ghi nhận: 30/10/2026. Mã được kiểm tra có .savings 15px ở quy tắc cơ sở, 16px dưới 600px.
 
@@ -30,11 +30,22 @@ Người chạy: AI Codex. Ngày ghi nhận: 30/10/2026. Mã được kiểm tra
 
 ## Tệp minh chứng
 
-- Lượt kiểm tra hiện tại: [dữ liệu](minh-chung/kiem-tra-cuoi/ket-qua-kiem-thu.json).
+- Lượt kiểm tra trước bước tự sửa: [dữ liệu](minh-chung/kiem-tra-cuoi/ket-qua-kiem-thu.json).
 - Thay đổi cỡ chữ: [máy tính](minh-chung/dieu-chinh-font/so-sanh-1366.png), [điện thoại](minh-chung/dieu-chinh-font/so-sanh-390.png).
 - So sánh toàn bộ thẻ Buổi 1 và Buổi 2: [ảnh](minh-chung/kiem-tra-cuoi/so-sanh-buoi1-buoi2.png).
-- Các kết quả cũ được giữ làm lịch sử; khi đối chiếu phiên bản hiện tại dùng thư mục kiem-tra-cuoi.
+- Các kết quả cũ được giữ làm lịch sử; sau bước thực hành cá nhân dùng thư mục sinh-vien-tu-sua.
+
+## Bổ sung sau bước sinh viên tự sửa
+
+Sinh viên xác nhận đã sửa font-size dòng Giá trước đây trên điện thoại từ 12px lên 14px và tải lại trang; hai ảnh trước sau được lưu trong minh-chung/sinh-vien-tu-sua. AI đã đồng bộ thay đổi này lên bản repository và chạy kiểm tra tập trung ở 1366, 1024, 768, 390, 360 và 320px:
+
+- Bốn dòng giá có cỡ chữ 14px dưới 600px, 13px trên màn hình lớn.
+- Bốn dòng giá nằm trong khung và giữ một dòng ở các viewport đã thử.
+- Lưới 4/2/1 cột, ảnh tải được, không tràn ngang; thẻ trên máy tính vẫn cao bằng nhau.
+- [Dữ liệu kiểm tra sau đồng bộ](minh-chung/sinh-vien-tu-sua/kiem-tra-sau-dong-bo.json).
+
+Các kết quả 12 nhóm trong thư mục kiem-tra-cuoi phía trên được giữ làm lịch sử trước thay đổi cỡ chữ cá nhân. Ảnh và phép đo sau bước thực hành dùng thư mục sinh-vien-tu-sua.
 
 ## Trạng thái cá nhân và giới hạn
 
-Kiểm thử trên đây do AI hỗ trợ thực hiện, không phải xác nhận sinh viên đã tự sửa hoặc tự chạy kiểm tra. Yêu cầu thay đổi độc lập của sinh viên chưa hoàn thành. Chưa thử điện thoại vật lý, nhiều trình duyệt hoặc kiểm định toàn bộ tiêu chuẩn accessibility. Xem DOI_CHIEU_YEU_CAU.md.
+Các phép đo tự động do AI thực hiện. Sinh viên tự thao tác sửa và tải lại trang theo hướng dẫn, đã gửi hai ảnh trước sau; xem THUC_HANH_CA_NHAN.md. Hai vai trò được ghi nhận riêng. Chưa thử điện thoại vật lý, nhiều trình duyệt hoặc kiểm định toàn bộ tiêu chuẩn accessibility. Xem DOI_CHIEU_YEU_CAU.md.

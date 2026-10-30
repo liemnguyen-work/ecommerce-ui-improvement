@@ -123,7 +123,7 @@ h3 { margin-top: 6px; min-height: 50px; font-size: 18px; font-weight: 600; line-
   .product-color { min-height: 0; margin-top: 6px; font-size: 12px; }
   .price-block { margin-top: 18px; }
   .current-price { font-size: 28px; }
-  .previous-price { font-size: 12px; }
+  .previous-price { font-size: 14px; }
   .savings { margin-top: 16px; font-size: 16px; }
   .product-details summary { min-height: 48px; font-size: 14px; }
   .collection-note { font-size: 11px; line-height: 1.7; }

@@ -26,6 +26,8 @@ Nếu không có quy tắc khác duy trì Grid, div .product-grid trở về blo
 
 Alt cung cấp mô tả văn bản thay thế, hỗ trợ người dùng trình đọc màn hình và có thể hiển thị khi ảnh không tải. Alt trong bài mô tả loại sản phẩm và màu của hình, không chỉ ghi tên tệp.
 
-## Câu 7. Một đề xuất AI được kiểm tra
+## Câu 7. Một đề xuất AI được kiểm tra và điều chỉnh
 
-Ví dụ đối chiếu là tăng cỡ chữ .savings từ 13/14px lên 15/16px. Cần sửa cả quy tắc cơ sở và media query, sau đó kiểm tra computed style, tràn ngang và khả năng hiển thị đầy đủ. Dữ liệu thử do AI thực hiện có trong minh-chung/dieu-chinh-font và kiem-tra-cuoi. Sinh viên cần tự mở mã, kiểm tra và diễn đạt phần hiểu của mình.
+AI gợi ý kiểm tra cỡ chữ dòng Giá trước đây trên điện thoại. Sau khi được chỉ vị trí media query dưới 600px, sinh viên tự sửa .previous-price từ 12px lên 14px, lưu và tải lại trang rồi gửi ảnh trước sau. Ảnh sau cho thấy dòng giá lớn hơn và còn nằm trên một dòng trong thẻ được chụp. Bản repository được AI đồng bộ và kiểm tra riêng: 14px dưới 600px, 13px từ 600px trở lên; không ghi nhận tràn hoặc xuống dòng của bốn dòng giá ở sáu viewport.
+
+Lý do chỉ sửa quy tắc trong media query là thay đổi nhắm vào điện thoại. Quy tắc cơ sở 13px vẫn áp dụng trên màn hình lớn. Đây là thực hành có AI hướng dẫn.

@@ -16,6 +16,6 @@ Căn cứ: tài liệu Buổi 2 HTML & CSS Bài tập cá nhân của TS. Nguy�
 | Nhật ký sử dụng AI | Yêu cầu được diễn đạt lại, phản hồi và đối chiếu | Đã có |
 | Bảy câu hỏi kiến thức | Mục 6 và CAU_HOI_KIEN_THUC.md | Đã có nội dung |
 | GitHub và README | Repository nhánh main | Đã cập nhật |
-| Sinh viên tự phát hiện và sửa một vấn đề | Chưa có thao tác độc lập của sinh viên | Chưa hoàn thành |
+| Sinh viên kiểm tra và tự sửa một vấn đề | Mục 4.4; ảnh trước sau, xác nhận đã sửa CSS và tải lại trang | Đã ghi nhận tự sửa theo hướng dẫn AI |
 
-**Kết luận:** mã và tài liệu kỹ thuật đã được đối chiếu; chưa thể xác nhận hoàn thành toàn bộ bài vì còn yêu cầu sinh viên tự sửa ít nhất một vấn đề.
+**Kết luận:** đã bổ sung bước thực hành cá nhân dựa trên xác nhận và ảnh sinh viên gửi. AI hướng dẫn xác định điểm cần sửa, sinh viên thao tác trên máy; AI đồng bộ và kiểm tra bản repository. Việc đánh giá mức độ tự phát hiện và hiểu mã thuộc giảng viên. Chưa xác nhận triển khai lại GitHub Pages hoặc thử điện thoại vật lý.

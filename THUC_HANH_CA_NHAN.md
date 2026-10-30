@@ -1,23 +1,23 @@
-# Sinh viên thực hành trên phiên bản hiện tại
+# Ghi nhận sinh viên tự thực hành Buổi 2
 
-## Phiên bản đang có
+## Vấn đề và thay đổi
 
-AI đã thực hiện cải tiến dòng Tiết kiệm theo yêu cầu hỗ trợ: `.savings` hiện là 15px ở quy tắc cơ sở và 16px dưới 600px. Ảnh trước/sau của lần thay đổi này nằm trong `minh-chung/dieu-chinh-font/`. Đây là thao tác có AI thực hiện, chưa xác nhận sinh viên tự sửa.
+Theo hướng dẫn AI, sinh viên mở trang ở chiều rộng 390px để quan sát dòng Giá trước đây. Thuộc tính font-size dành cho điện thoại đang là 12px; lựa chọn tăng lên 14px để tăng độ rõ.
 
-## Các bước tự kiểm tra và điều chỉnh
+- Tệp: css/style.css.
+- Vị trí: `.previous-price` bên trong `@media (max-width: 599px)`.
+- Trước: `.previous-price { font-size: 12px; }`.
+- Sau: `.previous-price { font-size: 14px; }`.
+- Quy tắc cơ sở dành cho màn hình lớn giữ 13px.
 
-1. Mở index.html và quan sát ở 1366, 768 và 390px.
-2. Đối chiếu font-size với css/style.css; giải thích vì sao ở điện thoại có quy tắc ghi đè.
-3. Chọn một điểm bản thân thực sự muốn cải thiện sau khi quan sát. Có thể thử khoảng cách giữa các kích cỡ hoặc padding, nếu thấy cần; không bắt buộc chọn một giá trị có sẵn.
-4. Chụp ảnh trước, tự sửa thuộc tính, lưu và tải lại trang.
-5. Kiểm tra lại, chụp ảnh sau và ghi đúng kết quả; giữ hoặc bỏ thay đổi theo kết quả quan sát.
+## Thao tác và minh chứng
 
-## Ghi nhận sau khi thực hiện
+Sinh viên đã xác nhận tự sửa, lưu và tải lại trang bằng Ctrl+R; hai ảnh trước sau được gửi trong cuộc trò chuyện. Ảnh sau cho thấy dòng giá trước đây lớn hơn và vẫn nằm trên một dòng của thẻ đang hiển thị. Hai ảnh cắt không chứa thanh viewport; thông số 390px được xác nhận trong ảnh DevTools của cùng lượt thao tác.
 
-- Vấn đề tôi tự phát hiện: [bổ sung].
-- Tệp và thuộc tính tôi tự sửa: [bổ sung].
-- Giá trị trước/sau và lý do: [bổ sung].
-- Kết quả kiểm tra lại và viewport: [bổ sung].
-- Ảnh minh chứng: [bổ sung].
+- [Ảnh trước](minh-chung/sinh-vien-tu-sua/truoc-390.png).
+- [Ảnh sau](minh-chung/sinh-vien-tu-sua/sau-390.png).
+- [So sánh](minh-chung/sinh-vien-tu-sua/so-sanh-390.png).
+- [Ghi nhận nguồn minh chứng](minh-chung/sinh-vien-tu-sua/ghi-nhan.json).
+- [Kiểm tra bản mã đồng bộ](minh-chung/sinh-vien-tu-sua/kiem-tra-sau-dong-bo.json).
 
-Cập nhật các phần này trong báo cáo và AI_USAGE.md sau khi thực hành. Khi giải thích, phân biệt phần AI hỗ trợ thực hiện với thao tác sinh viên tự làm.
+AI hướng dẫn xác định quy tắc và thao tác, sau đó đồng bộ mã và tổng hợp tài liệu. Phép đo computed style ở sáu viewport do AI thực hiện riêng trên bản repository. Tệp CSS gốc hoặc ảnh trình soạn thảo của sinh viên chưa được cung cấp; nguồn ghi nhận thao tác là xác nhận và ảnh kết quả của sinh viên.

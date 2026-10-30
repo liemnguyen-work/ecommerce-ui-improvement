@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-30",
+  "student_action": "Sinh viên xác nhận đã đổi font-size .previous-price trong media query dưới 600px từ 12px thành 14px, lưu tệp và tải lại trang bằng Ctrl+R.",
+  "support": "AI chỉ vị trí quy tắc, giải thích media query và hướng dẫn thao tác; sau đó đồng bộ thay đổi lên bản repository.",
+  "evidence": "Hai ảnh do sinh viên cung cấp trong cuộc trò chuyện. Ảnh sau cho thấy dòng giá trước đây lớn hơn và vẫn nằm trên một dòng trong thẻ đang hiển thị.",
+  "viewport": "390px theo phiên DevTools sinh viên đã xác nhận trước đó; hai ảnh cắt phần thẻ không chứa thanh số viewport.",
+  "not_claimed": "Chưa nhận tệp CSS hoặc ảnh trình soạn thảo từ sinh viên; giá trị trước/sau dựa vào thay đổi được hướng dẫn, xác nhận đã sửa của sinh viên và ảnh kết quả. Kiểm tra computed style của bản repository được AI chạy riêng."
+}

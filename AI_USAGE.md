@@ -84,9 +84,20 @@ Nhật ký được biên tập theo từng nhóm công việc kỹ thuật đã
 
 > Bạn dùng lại repository Buổi 1, cập nhật README và nhật ký AI để người đọc biết phần đã thay đổi, cách chạy và kết quả kiểm tra; báo cáo Word cần khớp với bản mã trên GitHub.
 
-**Phản hồi và phần đã triển khai:** Repository ecommerce-ui-improvement dùng nhánh main. Lịch sử Buổi 1 được giữ; mã HTML/CSS hiện tại gắn với commit 0034bbb. README, nhật ký, câu hỏi kiến thức và bảng đối chiếu đề được đồng bộ. Word giữ mẫu đã cung cấp, thay các ô trống có căn cứ bằng kết quả và ảnh thật, cập nhật mục lục sau khi dàn trang.
+**Phản hồi và phần đã triển khai:** Repository ecommerce-ui-improvement dùng nhánh main. Lịch sử Buổi 1 được giữ; bản mã trước bước tự sửa gắn với commit 0034bbb. README, nhật ký, câu hỏi kiến thức và bảng đối chiếu đề được đồng bộ. Word giữ mẫu đã cung cấp, thay các ô trống có căn cứ bằng kết quả và ảnh thật, cập nhật mục lục sau khi dàn trang.
 
 **Căn cứ đối chiếu:** README.md, KIEM_TRA.md, DOI_CHIEU_YEU_CAU.md, CAU_HOI_KIEN_THUC.md và báo cáo Word cập nhật.
+
+### 9. Sinh viên tự thao tác sửa cỡ chữ trên điện thoại
+
+Phần này ghi nhận lượt trao đổi bổ sung có ảnh thật do sinh viên cung cấp, sau khi bản báo cáo trước còn để trống bước thực hành cá nhân.
+
+- Sinh viên hỏi cách thực hiện mục 4.4. AI hướng dẫn kiểm tra dòng “Giá trước đây”, chỉ vị trí `.previous-price` trong media query dưới 600px và giải thích việc tăng từ 12px lên 14px.
+- Sinh viên mở DevTools, xác nhận chiều rộng 390px và gửi ảnh trước sửa. Khi nhầm DevTools với trình soạn thảo, sinh viên được hướng dẫn mở `css/style.css` bằng VS Code và sửa đúng quy tắc dành cho điện thoại.
+- Sinh viên xác nhận: “mình sửa r và ctrl R lun r”, rồi gửi ảnh sau. Ảnh cho thấy dòng giá trước đây lớn hơn, vẫn nằm trong một dòng ở thẻ được chụp.
+- AI lưu nguyên hai ảnh, đồng bộ thay đổi đã được sinh viên báo cáo lên bản repository, kiểm tra computed style ở sáu viewport và cập nhật báo cáo. Phép đo tự động là công việc AI thực hiện riêng.
+
+Minh chứng: `minh-chung/sinh-vien-tu-sua/truoc-390.png`, `sau-390.png`, `so-sanh-390.png`, `ghi-nhan.json` và `kiem-tra-sau-dong-bo.json`. Đây là thao tác sinh viên tự làm theo hướng dẫn AI, không phải tự nghiên cứu hoàn toàn không có hỗ trợ.
 
 ## Nội dung được giữ hoặc điều chỉnh khi đối chiếu
 
@@ -96,11 +107,11 @@ Nhật ký được biên tập theo từng nhóm công việc kỹ thuật đã
 - Giữ giá mẫu và kiểm tra phép tính; không coi đây là giá bán hiện tại của UNIQLO.
 - Kiểm tra cả quy tắc cơ sở và media query khi đổi cỡ chữ .savings.
 
-## Vai trò thực hiện và phần còn lại
+## Vai trò thực hiện sau khi bổ sung thực hành
 
-Sinh viên lựa chọn website tham khảo, cung cấp đề và mẫu báo cáo, yêu cầu tiếp tục phát triển và cập nhật repository. AI hỗ trợ phân tích, tạo thay đổi HTML/CSS, chạy kiểm thử và tổng hợp tài liệu. Các lượt sửa và kiểm thử được ghi ở đây là phần AI hỗ trợ thực hiện.
+Sinh viên lựa chọn website tham khảo, cung cấp đề và mẫu báo cáo, yêu cầu tiếp tục phát triển và cập nhật repository. AI hỗ trợ phân tích, tạo thay đổi HTML/CSS, chạy kiểm thử và tổng hợp tài liệu. Các lượt triển khai trước giai đoạn 9 do AI hỗ trợ thực hiện; giai đoạn 9 ghi riêng thao tác sinh viên tự làm theo hướng dẫn.
 
-Yêu cầu sinh viên tự phát hiện và sửa ít nhất một vấn đề chưa được xác nhận hoàn thành; trong phiên hỗ trợ hiện tại sinh viên chưa tự thao tác. Phần này không được đánh dấu đạt thay cho thực hành cá nhân. Xem THUC_HANH_CA_NHAN.md và DOI_CHIEU_YEU_CAU.md.
+Sinh viên đã tự sửa dòng giá trước đây trên bản cục bộ, tải lại trang và cung cấp ảnh trước sau. Nhận định này dựa trên xác nhận và ảnh của sinh viên; chưa nhận tệp CSS hoặc ảnh trình soạn thảo. Bản repository được đồng bộ đúng thay đổi 12px → 14px và được AI kiểm tra riêng. Xem THUC_HANH_CA_NHAN.md và DOI_CHIEU_YEU_CAU.md.
 
 ## Giới hạn kiểm tra
 

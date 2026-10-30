@@ -1,0 +1,287 @@
+{
+  "date": "2026-10-30",
+  "performed_by": "AI Codex, kiểm tra bản repository sau khi đồng bộ thay đổi sinh viên đã báo cáo",
+  "scope": "Cỡ chữ và dòng giá trước đây, độ rộng trang, số cột, tải ảnh, chiều cao thẻ trên máy tính",
+  "viewports": [
+    {
+      "viewport": 1366,
+      "documentWidth": 1366,
+      "columns": 4,
+      "priceRows": [
+        {
+          "fontSize": "13px",
+          "width": 266,
+          "scrollWidth": 266,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 391.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 266,
+          "scrollWidth": 266,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 499.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 266,
+          "scrollWidth": 266,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 599.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 266,
+          "scrollWidth": 266,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 999.000đ"
+        }
+      ],
+      "images": true,
+      "cardHeights": [
+        656,
+        656,
+        656,
+        656
+      ]
+    },
+    {
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "columns": 4,
+      "priceRows": [
+        {
+          "fontSize": "13px",
+          "width": 182,
+          "scrollWidth": 182,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 391.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 182,
+          "scrollWidth": 182,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 499.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 182,
+          "scrollWidth": 182,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 599.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 182,
+          "scrollWidth": 182,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 999.000đ"
+        }
+      ],
+      "images": true,
+      "cardHeights": [
+        580,
+        580,
+        580,
+        580
+      ]
+    },
+    {
+      "viewport": 768,
+      "documentWidth": 768,
+      "columns": 2,
+      "priceRows": [
+        {
+          "fontSize": "13px",
+          "width": 310,
+          "scrollWidth": 310,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 391.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 310,
+          "scrollWidth": 310,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 499.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 310,
+          "scrollWidth": 310,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 599.000đ"
+        },
+        {
+          "fontSize": "13px",
+          "width": 310,
+          "scrollWidth": 310,
+          "height": 20,
+          "lineHeight": "19.5px",
+          "text": "Giá trước đây 999.000đ"
+        }
+      ],
+      "images": true,
+      "cardHeights": [
+        697,
+        697,
+        697,
+        697
+      ]
+    },
+    {
+      "viewport": 390,
+      "documentWidth": 390,
+      "columns": 1,
+      "priceRows": [
+        {
+          "fontSize": "14px",
+          "width": 316,
+          "scrollWidth": 316,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 391.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 316,
+          "scrollWidth": 316,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 499.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 316,
+          "scrollWidth": 316,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 599.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 316,
+          "scrollWidth": 316,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 999.000đ"
+        }
+      ],
+      "images": true,
+      "cardHeights": [
+        707,
+        707,
+        707,
+        707
+      ]
+    },
+    {
+      "viewport": 360,
+      "documentWidth": 360,
+      "columns": 1,
+      "priceRows": [
+        {
+          "fontSize": "14px",
+          "width": 286,
+          "scrollWidth": 286,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 391.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 286,
+          "scrollWidth": 286,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 499.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 286,
+          "scrollWidth": 286,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 599.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 286,
+          "scrollWidth": 286,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 999.000đ"
+        }
+      ],
+      "images": true,
+      "cardHeights": [
+        679,
+        679,
+        679,
+        679
+      ]
+    },
+    {
+      "viewport": 320,
+      "documentWidth": 320,
+      "columns": 1,
+      "priceRows": [
+        {
+          "fontSize": "14px",
+          "width": 246,
+          "scrollWidth": 246,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 391.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 246,
+          "scrollWidth": 246,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 499.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 246,
+          "scrollWidth": 246,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 599.000đ"
+        },
+        {
+          "fontSize": "14px",
+          "width": 246,
+          "scrollWidth": 246,
+          "height": 21,
+          "lineHeight": "21px",
+          "text": "Giá trước đây 999.000đ"
+        }
+      ],
+      "images": true,
+      "cardHeights": [
+        643,
+        643,
+        643,
+        643
+      ]
+    }
+  ],
+  "limitations": [
+    "Viewport mô phỏng trong Chromium; chưa thử điện thoại vật lý.",
+    "Hai ảnh trước sau do sinh viên cung cấp; phép đo computed style riêng do AI thực hiện trên bản repository."
+  ]
+}
