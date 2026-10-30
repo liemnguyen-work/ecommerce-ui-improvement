@@ -1,91 +1,107 @@
-# AI Usage Log Buổi 2
+# Nhật ký sử dụng AI Buổi 2
 
-## 1. Công cụ và mục đích sử dụng
+## Công cụ mục đích và cách ghi nhận
 
-Tôi sử dụng ChatGPT/Codex để hỗ trợ tiếp tục phát triển bài tập Buổi 1 theo yêu cầu HTML5 và CSS3 của Buổi 2. Quá trình hỗ trợ gồm đọc đề, rà soát mã cũ, hoàn thiện giao diện, giải thích mã, chạy kiểm tra trình duyệt, chuẩn bị minh chứng, cập nhật GitHub và trình bày báo cáo.
+Công cụ: ChatGPT/Codex. Bài tiếp tục danh sách sản phẩm của bản mẫu Mặc, tham khảo UNIQLO Việt Nam, từ mã nguồn Buổi 1.
 
-## 2. Nhật ký trao đổi và quá trình thực hiện
+Nhật ký được biên tập theo từng nhóm công việc kỹ thuật đã thực hiện. Các câu yêu cầu dưới đây là cách diễn đạt lại nội dung hỗ trợ cho rõ ý, không phải bản chép nguyên văn hoặc các tin nhắn độc lập đã gửi. Kết quả được ghi từ mã, ảnh và dữ liệu kiểm tra thực tế.
 
-Nội dung dưới đây là bản tóm lược trao đổi thực tế. Các câu yêu cầu được biên tập lại cho rõ ý; những bước AI triển khai trong cùng một yêu cầu được nhóm theo công việc, không phải bản chép nguyên văn từng tin nhắn.
+## Quá trình trao đổi về mã nguồn
 
-### 2.1. Đọc đề và xác định phạm vi
+### 1. Rà lại bài Buổi 1 và cấu trúc HTML5
 
-**Tôi trao đổi:** “Mình quay lại bài tập cá nhân Buổi 2. Bạn đọc kỹ đề, hướng dẫn các bước làm và đề xuất những phần cần trình bày trong báo cáo Word.”
+**Nội dung yêu cầu được diễn đạt lại:**
 
-**AI hỗ trợ:** Đọc tài liệu 23 trang và xác định phải tiếp tục mã nguồn, repository của Buổi 1. Từ bài đã làm theo hướng tham khảo UNIQLO Việt Nam, khu vực được tiếp tục phát triển là danh sách và thẻ sản phẩm của bản mẫu Mặc. AI phân biệt các nội dung trọng tâm với CSS Grid là phần mở rộng, đồng thời lưu ý yêu cầu tự sửa một vấn đề và trả lời bảy câu hỏi kiến thức.
+> Mình đang tiếp tục phần danh sách sản phẩm từ Buổi 1. Bạn xem lại HTML và CSS hiện có, chỉ ra phần nên giữ, phần cần cải thiện và giải thích cách dùng các thẻ HTML5 cho phù hợp nhé.
 
-**Kết quả:** Xác định được phạm vi làm bài và các phần cần có trong báo cáo; không chuyển sang tạo một website mới.
+**Phản hồi và phần đã triển khai:** Mã cũ đã có header, nav, main, section, article, aside, footer và details/summary. Vì vậy, giữ cấu trúc chính và bốn sản phẩm; bổ sung ul/li cho menu và danh sách kích cỡ, giữ tiêu đề theo thứ bậc và alt mô tả ảnh. Các kích cỡ chỉ hiển thị thông tin vì bản mẫu chưa có chức năng chọn biến thể.
 
-### 2.2. Rà soát và hoàn thiện mã HTML/CSS
+**Căn cứ đối chiếu:** index.html; bốn article sản phẩm, bốn ảnh có alt và các đích điều hướng nội trang.
 
-**Tôi trao đổi:** “Bạn hoàn thiện phần code trước, sau đó ghi nhận báo cáo dựa trên những gì đã thực hiện.”
+### 2. Liên kết CSS và điều chỉnh selector cùng Box Model
 
-**AI hỗ trợ rà soát:** Mở mã Buổi 1 và xác nhận đã có HTML5 có ngữ nghĩa, CSS riêng, Flexbox, Grid, hover và focus. Các điểm cần cải thiện được xác định từ mã thực tế: chữ nhóm sản phẩm là 9px, dòng giá trước đây là 11px trên máy tính; kích cỡ đang nằm cùng đoạn văn với màu; summary có đổi màu khi hover nhưng chưa có transition cho nền và màu chữ.
+**Nội dung yêu cầu được diễn đạt lại:**
 
-**AI hỗ trợ chỉnh HTML:** Giữ cấu trúc header, nav, main, section, article, aside, footer và details/summary. Bổ sung ul/li cho menu và kích cỡ, tách thông tin màu khỏi danh sách kích cỡ, giữ alt cho ảnh và thêm liên kết mở đúng tệp ảnh SVG đang có.
+> Mình muốn giữ CSS trong tệp riêng và làm thẻ sản phẩm dễ đọc hơn. Bạn kiểm tra đường dẫn CSS, cách chọn phần tử và giải thích margin, padding, border cùng border-box trên chính mã này nhé.
 
-**AI hỗ trợ chỉnh CSS:** Tăng cỡ chữ phụ lên 11px và 13px trên máy tính; dùng Flexbox cho danh sách kích cỡ với align-items, justify-content, gap và flex-wrap; giữ Grid 4/2/1 cột theo chiều rộng; bổ sung transition 0,2 giây cho summary và giữ focus-visible. Các nhóm quy tắc có chú thích để đọc và giải thích lại.
+**Phản hồi và phần đã triển khai:** Tệp HTML liên kết css/style.css bằng đường dẫn tương đối. Element selector, class selector và descendant selector được dùng ở img, .product-card và .size-list li. Product-content có padding 18px trên máy tính; product-sizes có margin-top 12px; các ô kích cỡ có border và bo góc. Chữ nhóm sản phẩm tăng từ 9 lên 11px, dòng giá trước đây từ 11 lên 13px trên máy tính.
 
-**Kết quả:** Có bản HTML/CSS tiếp tục từ Buổi 1, giữ bốn sản phẩm, hình minh họa và giá mẫu. Các kích cỡ chỉ là thông tin hiển thị, chưa được biến thành nút chọn khi không có chức năng tương ứng.
+**Căn cứ đối chiếu:** css/style.css; computed style của bản hiện tại; ảnh so sánh Buổi 1 và Buổi 2.
 
-### 2.3. Kiểm tra giao diện và ghi nhận kết quả
+### 3. Căn nhóm kích cỡ bằng Flexbox
 
-**Nội dung tiếp theo trong yêu cầu hoàn thiện bài:** Ghi nhận báo cáo sau khi đã hoàn thành và kiểm tra phần code.
+**Nội dung yêu cầu được diễn đạt lại:**
 
-**AI hỗ trợ:** Chạy 12 nhóm kiểm tra trên Chromium tại viewport 1366, 1024, 768, 390, 360 và 320px. Các kiểm tra gồm tải HTML/CSS/ảnh, số cột, tràn ngang, liên kết nội trang, mở ảnh SVG, mở/đóng details, hover, focus bằng phím Tab, thao tác Enter, giảm chuyển động và phép tính tiết kiệm. Cách mở trực tiếp index.html bằng file:// cũng được kiểm tra.
+> Các kích cỡ đang nằm chung với dòng màu sản phẩm. Bạn giúp tách chúng thành một nhóm rõ ràng và dùng Flexbox để sắp xếp; giải thích phần tử cha, justify-content, align-items và gap.
 
-**Kết quả:** Không ghi nhận tràn ngang ở sáu viewport đã thử; ảnh và liên kết hoạt động; trạng thái hover/focus và mở/đóng chi tiết đúng trong các thao tác đã kiểm tra. Kết quả do AI chạy được lưu tại [KIEM_TRA.md](KIEM_TRA.md) và [dữ liệu gốc](minh-chung/ket-qua-kiem-thu.json); ảnh nằm trong thư mục minh-chung. Đây là kiểm tra mô phỏng trên máy tính, chưa phải thử trên điện thoại vật lý.
+**Phản hồi và phần đã triển khai:** Mỗi nhóm kích cỡ dùng ul.size-list chứa bốn li. Flexbox đặt trên ul với justify-content: flex-start, align-items: center, gap: 6px và flex-wrap: wrap. Product-content dùng Flexbox theo cột để phần chi tiết nằm cuối thẻ khi mô tả đóng.
 
-### 2.4. Làm rõ trạng thái và cập nhật GitHub
+**Căn cứ đối chiếu:** ul.size-list trong HTML; display tính được là flex; bốn thẻ đóng cao bằng nhau ở viewport máy tính.
 
-**Tôi trao đổi:** Hỏi bản mới đã được cập nhật lên GitHub chưa, sau đó yêu cầu AI đẩy bản Buổi 2 lên repository giúp mình.
+### 4. Giữ Grid và kiểm tra bố cục nhiều kích thước
 
-**AI hỗ trợ:** Làm rõ rằng gói mã ban đầu mới ở máy cục bộ; sau khi có yêu cầu cập nhật, lấy bản repository hiện tại, đưa mã và tài liệu Buổi 2 lên nhánh main rồi đối chiếu commit trên GitHub với bản cục bộ.
+**Nội dung yêu cầu được diễn đạt lại:**
 
-**Kết quả:** Commit triển khai mã Buổi 2 là [7f56d75](https://github.com/liemnguyen-work/ecommerce-ui-improvement/commit/7f56d75c627e90a74f9f67ceb29f65d2ea161f11), gồm 20 tệp thay đổi và bổ sung, có 13 ảnh minh chứng. Lịch sử Buổi 1 vẫn được giữ. Việc triển khai hoặc kiểm tra lại GitHub Pages chưa được xác nhận trong lượt hỗ trợ này.
+> Mình đã có lưới sản phẩm. Bạn kiểm tra các mốc đổi số cột và ảnh, giữ bố cục phù hợp khi xem trên máy tính, máy tính bảng và điện thoại.
 
-### 2.5. Trình bày báo cáo và xác định phần cần tự bổ sung
+**Phản hồi và phần đã triển khai:** Grid giữ bốn cột từ 1024px, hai cột từ 600 đến 1023px và một cột dưới 600px. Minmax(0, 1fr) cho phép cột co lại; gap quản lý khoảng cách giữa thẻ. Ảnh giữ tỷ lệ trong khung bằng aspect-ratio và object-fit: cover.
 
-**Tôi trao đổi:** “Bạn dựa vào format báo cáo Buổi 1 để làm báo cáo Buổi 2; phần nào cần mình bổ sung thì chừa trống.”
+**Căn cứ đối chiếu:** Kết quả viewport 1366, 1024, 768, 390, 360 và 320px; ảnh tải được và không ghi nhận tràn ngang.
 
-**AI hỗ trợ:** Đọc mẫu Word đã gửi, giữ khung bìa UEH, thông tin học phần, font Times New Roman, cỡ chữ chính 13, giãn dòng 1,5 và cách trình bày tiêu đề, bảng, hình. Nội dung báo cáo được sắp xếp theo mã đã thực hiện và kết quả kiểm tra, có mục lục và phần trả lời bảy câu hỏi.
+### 5. Hoàn thiện hover và focus của phần xem chi tiết
 
-**Kết quả:** Báo cáo có các chỗ trống để sinh viên điền ngày nộp, kết quả tự kiểm tra, một thay đổi độc lập, ảnh trước/sau của thay đổi đó, nhận xét cá nhân và ảnh GitHub. Những phần này không được ghi thành việc đã hoàn thành khi chưa thực hiện.
+**Nội dung yêu cầu được diễn đạt lại:**
 
-### 2.6. Bổ sung cải tiến cỡ chữ dòng Tiết kiệm
+> Nút Xem chi tiết cần phản hồi rõ khi rê chuột và khi dùng bàn phím. Bạn kiểm tra hover, thêm chuyển đổi nhẹ và giữ dấu hiệu focus dễ nhận biết.
 
-**Nội dung yêu cầu được tóm lược:** Sinh viên giao AI chủ động chọn một thay đổi phù hợp, thực hiện và ghi nhận kết quả để tiếp tục hoàn thiện bài.
+**Phản hồi và phần đã triển khai:** Summary kế thừa hover và được thêm transition 0,2 giây cho màu nền, màu chữ, đường viền. Focus-visible dùng viền xanh 3px. Tab tới được summary; Enter mở rồi đóng details. Khi bật prefers-reduced-motion, transition trở về 0 giây.
 
-**AI hỗ trợ:** Chọn tăng cỡ chữ dòng Tiết kiệm để làm rõ thông tin ưu đãi. Trước khi sửa, chụp bản hiện tại tại viewport 1366, 768 và 390px. Sau đó đổi font-size của `.savings` cơ sở từ 13px thành 15px, và quy tắc dưới 600px từ 14px thành 16px.
+**Căn cứ đối chiếu:** Ảnh bình thường, hover, focus và kết quả kiểm tra bàn phím trong dữ liệu cuối.
 
-**Kết quả kiểm tra của AI:** Ở 1366px và 768px, computed style là 15px; ở 390px là 16px. Bốn dòng Tiết kiệm tại từng viewport đều nằm trong khung; Grid giữ 4/2/1 cột, ảnh tải được và không ghi nhận tràn ngang hoặc lỗi tài nguyên trong lượt thử. Ảnh trước/sau và dữ liệu nằm trong [minh-chung/dieu-chinh-font](minh-chung/dieu-chinh-font).
+### 6. Tăng độ rõ của dòng Tiết kiệm
 
-Lượt chỉnh sửa và kiểm tra này do AI thực hiện theo yêu cầu hỗ trợ. Phần sinh viên tự thao tác và tự giải thích vẫn cần được xác nhận sau khi thực hành.
+**Nội dung yêu cầu được diễn đạt lại:**
 
-## 3. Kết quả AI đề xuất và cách đối chiếu
+> Bạn chọn một điểm trình bày cần cải thiện thêm trên thẻ sản phẩm, thực hiện thay đổi nhỏ và lưu ảnh trước sau để đối chiếu.
 
-- Giữ các thành phần HTML5, Flexbox, Grid và focus vốn đã có; không kết luận sai rằng bài cũ thiếu chúng.
-- Tách menu và kích cỡ thành ul/li để phù hợp với nội dung dạng danh sách.
-- Tăng cỡ chữ phụ và bổ sung transition; các giá trị được đối chiếu với CSS và computed style trong lượt kiểm tra của AI.
-- Giữ các ô kích cỡ là thông tin tĩnh; không dùng nút chọn giả khi chưa có chức năng chọn biến thể.
-- Dùng liên kết mở ảnh SVG có thật; không thêm liên kết tới product-detail.html khi dự án chưa có trang này.
-- Giữ giá mẫu và kiểm tra phép trừ, tỷ lệ làm tròn; không gọi đó là giá bán hiện tại của UNIQLO.
+**Phản hồi và phần đã triển khai:** Lựa chọn tăng font-size của .savings từ 13 lên 15px ở quy tắc cơ sở và từ 14 lên 16px trong media query dưới 600px. Giữ màu, nền và khoảng cách hiện có. Ảnh trước sau được chụp từ hai trạng thái mã thật; computed style khớp giá trị mới, bốn dòng tiết kiệm đều nằm trong khung tại các viewport đã thử.
 
-## 4. Phần sinh viên tự kiểm tra và điều chỉnh
+**Căn cứ đối chiếu:** minh-chung/dieu-chinh-font; before/after-1366.png, before/after-390.png và ket-qua.json.
 
-Các lượt kiểm tra trình duyệt nêu trên do AI thực hiện. Phần sinh viên tự phát hiện và sửa một điểm cần được bổ sung sau khi thực hành theo [THUC_HANH_CA_NHAN.md](THUC_HANH_CA_NHAN.md):
+### 7. Kiểm tra kết quả thay vì chỉ dựa vào đề xuất
 
-- Vấn đề tôi tự phát hiện: [bổ sung sau khi quan sát].
-- Tệp, selector hoặc phần tử tôi tự sửa: [bổ sung].
-- Giá trị trước và sau khi sửa: [bổ sung].
-- Lý do lựa chọn thay đổi: [bổ sung].
-- Kết quả tôi tự kiểm tra lại và kích thước màn hình: [bổ sung].
-- Ảnh minh chứng trước/sau: [bổ sung đường dẫn].
+**Nội dung yêu cầu được diễn đạt lại:**
 
-## 5. Các thành phần cần hiểu để giải thích
+> Bạn kiểm tra bản HTML và CSS đã cập nhật, chỉ kết luận những gì có thể đối chiếu bằng mã, thao tác trình duyệt và ảnh; lưu các kết quả để đưa vào báo cáo.
 
-Vai trò của article, ul/li, img/alt và details/summary; element/class/descendant selector; margin, padding và border-box; Flexbox với hai trục; Grid 4/2/1 cột; hover và focus; media query; đường dẫn tương đối. Đây là nội dung AI đã giải thích để sinh viên đọc, thực hành và tự xác nhận mức hiểu.
+**Phản hồi và phần đã triển khai:** Lượt kiểm tra cuối chạy 12 nhóm kiểm tra ở sáu viewport. HTML/CSS và ảnh tải đúng; liên kết nội trang và bốn liên kết SVG hoạt động; giá tiết kiệm và tỷ lệ làm tròn khớp; hover, focus, Enter và giảm chuyển động hoạt động trong phạm vi thử. Mở trực tiếp bằng file:// tải được CSS và ảnh.
 
-## 6. Giới hạn
+**Căn cứ đối chiếu:** minh-chung/kiem-tra-cuoi/ket-qua-kiem-thu.json; các ảnh chụp đi kèm; người chạy kiểm thử là AI Codex.
 
-Trang sử dụng HTML5/CSS3 và dữ liệu giá tĩnh; chưa có chức năng tìm kiếm, lọc, sắp xếp hay giỏ hàng bằng JavaScript. Kết quả kiểm tra không thay thế việc sinh viên tự chạy, sửa mã và giải thích bài. Chưa kiểm tra trên thiết bị vật lý, nhiều trình duyệt hoặc xác nhận lại GitHub Pages.
+### 8. Đồng bộ mã nguồn tài liệu và báo cáo
+
+**Nội dung yêu cầu được diễn đạt lại:**
+
+> Bạn dùng lại repository Buổi 1, cập nhật README và nhật ký AI để người đọc biết phần đã thay đổi, cách chạy và kết quả kiểm tra; báo cáo Word cần khớp với bản mã trên GitHub.
+
+**Phản hồi và phần đã triển khai:** Repository ecommerce-ui-improvement dùng nhánh main. Lịch sử Buổi 1 được giữ; mã HTML/CSS hiện tại gắn với commit 0034bbb. README, nhật ký, câu hỏi kiến thức và bảng đối chiếu đề được đồng bộ. Word giữ mẫu đã cung cấp, thay các ô trống có căn cứ bằng kết quả và ảnh thật, cập nhật mục lục sau khi dàn trang.
+
+**Căn cứ đối chiếu:** README.md, KIEM_TRA.md, DOI_CHIEU_YEU_CAU.md, CAU_HOI_KIEN_THUC.md và báo cáo Word cập nhật.
+
+## Nội dung được giữ hoặc điều chỉnh khi đối chiếu
+
+- Giữ semantic HTML, Grid, Flexbox và focus vốn đã có trong mã cũ.
+- Dùng ul/li cho dữ liệu kích cỡ; không tạo nút chọn khi chưa có chức năng chọn biến thể.
+- Mở đúng ảnh SVG có thật; không trỏ tới trang product-detail.html chưa tồn tại.
+- Giữ giá mẫu và kiểm tra phép tính; không coi đây là giá bán hiện tại của UNIQLO.
+- Kiểm tra cả quy tắc cơ sở và media query khi đổi cỡ chữ .savings.
+
+## Vai trò thực hiện và phần còn lại
+
+Sinh viên lựa chọn website tham khảo, cung cấp đề và mẫu báo cáo, yêu cầu tiếp tục phát triển và cập nhật repository. AI hỗ trợ phân tích, tạo thay đổi HTML/CSS, chạy kiểm thử và tổng hợp tài liệu. Các lượt sửa và kiểm thử được ghi ở đây là phần AI hỗ trợ thực hiện.
+
+Yêu cầu sinh viên tự phát hiện và sửa ít nhất một vấn đề chưa được xác nhận hoàn thành; trong phiên hỗ trợ hiện tại sinh viên chưa tự thao tác. Phần này không được đánh dấu đạt thay cho thực hành cá nhân. Xem THUC_HANH_CA_NHAN.md và DOI_CHIEU_YEU_CAU.md.
+
+## Giới hạn kiểm tra
+
+Kiểm thử bằng Chromium và viewport mô phỏng trên máy tính, chưa thử trên điện thoại vật lý hoặc nhiều trình duyệt. Trang dùng HTML5/CSS3 thuần và giá tĩnh, chưa có chức năng JavaScript, backend hoặc cơ sở dữ liệu. Chưa xác nhận triển khai lại GitHub Pages.

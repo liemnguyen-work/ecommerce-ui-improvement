@@ -1,6 +1,6 @@
-# Kết quả kiểm thử Buổi 2
+# Kết quả kiểm thử cuối Buổi 2
 
-Người thực hiện: AI Codex. Ngày 30/10/2026. Chromium headless, viewport mô phỏng; không phải thiết bị vật lý.
+Người chạy: AI Codex. Ngày ghi nhận: 30/10/2026. Mã được kiểm tra có .savings 15px ở quy tắc cơ sở, 16px dưới 600px.
 
 | Nhóm kiểm tra | Kết quả |
 | --- | --- |
@@ -17,36 +17,24 @@ Người thực hiện: AI Codex. Ngày 30/10/2026. Chromium headless, viewport 
 | Không lỗi tải tài nguyên, không lỗi JavaScript, không yêu cầu mạng ngoài | Đạt |
 | HTML5 và CSS3 thuần, không script hoặc framework | Đạt |
 
-## Viewport thực tế
+## Kích thước màn hình
 
-| Chiều rộng | Số cột | Chiều rộng tài liệu | Ảnh |
-| --- | --- | --- | --- |
-| 1366px | 4 | 1366px | 4/4 tải đúng, có alt |
-| 1024px | 4 | 1024px | 4/4 tải đúng, có alt |
-| 768px | 2 | 768px | 4/4 tải đúng, có alt |
-| 390px | 1 | 390px | 4/4 tải đúng, có alt |
-| 360px | 1 | 360px | 4/4 tải đúng, có alt |
-| 320px | 1 | 320px | 4/4 tải đúng, có alt |
-
-## Giới hạn và phần còn lại
-
-- Chưa kiểm tra trên điện thoại vật lý hoặc nhiều trình duyệt.
-- Chưa xác nhận sinh viên tự sửa một vấn đề.
-- Kết quả tự động được ghi trước khi upload GitHub. Bản mã và minh chứng Buổi 2 được cập nhật trong commit này; chưa kiểm tra việc triển khai lại website.
-- Đây không phải kiểm định đầy đủ HTML hoặc toàn bộ tiêu chuẩn accessibility.
-- Bản mẫu dùng giá tĩnh; khi thay giá phải cập nhật đồng thời mức tiết kiệm và tỷ lệ.
-- Dữ liệu gốc: minh-chung/ket-qua-kiem-thu.json.
-- Xem THUC_HANH_CA_NHAN.md để hoàn thành phần tự điều chỉnh.
-
-
-## Kiểm tra bổ sung sau khi tăng cỡ chữ dòng Tiết kiệm
-
-Người thực hiện: AI Codex theo yêu cầu hỗ trợ. Bảng 12 nhóm kiểm tra phía trên phản ánh bản trước lượt chỉnh cỡ chữ này; dưới đây là kiểm tra phần thay đổi. Dữ liệu: [ket-qua.json](minh-chung/dieu-chinh-font/ket-qua.json).
-
-| Viewport | Cỡ chữ trước | Cỡ chữ sau | Số cột | Kết quả |
+| Viewport | Số cột | Chiều rộng tài liệu | Cỡ chữ Tiết kiệm | Hiển thị |
 | --- | --- | --- | --- | --- |
-| 1366px | 13px | 15px | 4 | 4 dòng nằm trong khung; không tràn ngang |
-| 768px | 13px | 15px | 2 | 4 dòng nằm trong khung; không tràn ngang |
-| 390px | 14px | 16px | 1 | 4 dòng nằm trong khung; không tràn ngang |
+| 1366px | 4 | 1366px | 15px | 4 ảnh tải được, dòng tiết kiệm trong khung |
+| 1024px | 4 | 1024px | 15px | 4 ảnh tải được, dòng tiết kiệm trong khung |
+| 768px | 2 | 768px | 15px | 4 ảnh tải được, dòng tiết kiệm trong khung |
+| 390px | 1 | 390px | 16px | 4 ảnh tải được, dòng tiết kiệm trong khung |
+| 360px | 1 | 360px | 16px | 4 ảnh tải được, dòng tiết kiệm trong khung |
+| 320px | 1 | 320px | 16px | 4 ảnh tải được, dòng tiết kiệm trong khung |
 
-Ảnh tải đúng, không ghi nhận lỗi tài nguyên trong lượt kiểm tra. Ảnh đối chiếu: [máy tính](minh-chung/dieu-chinh-font/so-sanh-1366.png), [điện thoại](minh-chung/dieu-chinh-font/so-sanh-390.png). Đây là kiểm thử mô phỏng bằng Chromium; chưa phải xác nhận sinh viên tự sửa mã hoặc đã thử trên thiết bị vật lý.
+## Tệp minh chứng
+
+- Lượt kiểm tra hiện tại: [dữ liệu](minh-chung/kiem-tra-cuoi/ket-qua-kiem-thu.json).
+- Thay đổi cỡ chữ: [máy tính](minh-chung/dieu-chinh-font/so-sanh-1366.png), [điện thoại](minh-chung/dieu-chinh-font/so-sanh-390.png).
+- So sánh toàn bộ thẻ Buổi 1 và Buổi 2: [ảnh](minh-chung/kiem-tra-cuoi/so-sanh-buoi1-buoi2.png).
+- Các kết quả cũ được giữ làm lịch sử; khi đối chiếu phiên bản hiện tại dùng thư mục kiem-tra-cuoi.
+
+## Trạng thái cá nhân và giới hạn
+
+Kiểm thử trên đây do AI hỗ trợ thực hiện, không phải xác nhận sinh viên đã tự sửa hoặc tự chạy kiểm tra. Yêu cầu thay đổi độc lập của sinh viên chưa hoàn thành. Chưa thử điện thoại vật lý, nhiều trình duyệt hoặc kiểm định toàn bộ tiêu chuẩn accessibility. Xem DOI_CHIEU_YEU_CAU.md.
