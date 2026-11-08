@@ -1,0 +1,9 @@
+.game-group { margin-top: 28px; }
+.game-group h2 { margin-bottom: 3px; }
+.game-group > p { margin-top: 0; }
+.levels-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 14px; }
+.level { padding: 14px; background: white; border: 1px solid #d8e4e8; border-radius: 12px; }
+.level h3 { margin: 0; font-size: 1rem; }
+.level p { margin: 5px 0; }
+.level code { display: inline-block; padding: 3px 7px; background: #e9f5f0; color: #0c5653; border-radius: 4px; }
+.level img { display: block; width: 100%; margin-top: 10px; border-radius: 5px; }

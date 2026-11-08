@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #182736; background: #eef4f5; }
+body { margin: 0; line-height: 1.55; }
+a { color: #086b68; }
+a:focus-visible { outline: 3px solid #0d827d; outline-offset: 4px; }
+img { max-width: 100%; }
+.shell { width: min(1080px, calc(100% - 36px)); margin-inline: auto; }
+.bar { padding: 16px 0; background: #fff; border-bottom: 1px solid #d8e4e8; }
+.bar a { font-weight: 700; text-decoration: none; }
+.lesson { padding: 32px 0 54px; }
+.lesson-heading { margin-bottom: 24px; }
+.kicker { margin: 0 0 6px; color: #086b68; font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+h1 { margin: 0; line-height: 1.17; font-size: clamp(1.65rem, 3.6vw, 2.7rem); }
+.lesson-heading p:last-child { margin-bottom: 0; color: #445766; }
+.panel { padding: clamp(16px, 3vw, 36px); background: #fff; border: 1px solid #d8e4e8; border-radius: 14px; }
+.panel + .panel { margin-top: 16px; }
+.panel h2 { margin: 0 0 12px; }
+code { font-family: Consolas, monospace; overflow-wrap: anywhere; }
+footer.shell { padding: 14px 0 24px; color: #445766; font-size: .9rem; }
+.profile { display: flex; align-items: center; gap: clamp(20px, 5vw, 52px); padding: clamp(25px, 6vw, 60px); border-radius: 22px; background: #122c3c; color: #fff; }
+.profile img { flex: none; width: clamp(72px, 14vw, 142px); border-radius: 22px; border: 4px solid #b9ded6; background: #eaf7f2; }
+.profile .kicker { color: #a3ead9; }
+.profile p { margin: 9px 0; }
+.profile a { color: #a3ead9; }
+.assignment-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0; list-style: none; }
+.assignment-list a { display: block; height: 100%; padding: 18px; border: 1px solid #d8e4e8; border-radius: 14px; background: #fff; color: #182736; text-decoration: none; }
+.assignment-list a:hover { border-color: #0d827d; background: #f3fffa; }
+.assignment-list span { display: block; color: #086b68; font-size: .82rem; font-weight: 800; }
+.assignment-list small { color: #445766; }
+@media (max-width: 700px) { .assignment-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .profile { align-items: flex-start; flex-direction: column; } .assignment-list { grid-template-columns: 1fr; } }

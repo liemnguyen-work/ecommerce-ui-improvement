@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-08",
+  "browser": "156.0.8078.49",
+  "actor": "Codex",
+  "pages": [
+    {
+      "file": "index.html",
+      "width": 1366,
+      "images": 1,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap1.html",
+      "width": 1366,
+      "images": 43,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap2.html",
+      "width": 1366,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap3.html",
+      "width": 1366,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap4.html",
+      "width": 1366,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap5.html",
+      "width": 1366,
+      "images": 1,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap6.html",
+      "width": 1366,
+      "images": 9,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap7.html",
+      "width": 1366,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap8.html",
+      "width": 1366,
+      "images": 5,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap9.html",
+      "width": 1366,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 390,
+      "images": 1,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap1.html",
+      "width": 390,
+      "images": 43,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap2.html",
+      "width": 390,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap3.html",
+      "width": 390,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap4.html",
+      "width": 390,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap5.html",
+      "width": 390,
+      "images": 1,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap6.html",
+      "width": 390,
+      "images": 9,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap7.html",
+      "width": 390,
+      "images": 0,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap8.html",
+      "width": 390,
+      "images": 5,
+      "overflow": false
+    },
+    {
+      "file": "BaiTap9.html",
+      "width": 390,
+      "images": 0,
+      "overflow": false
+    }
+  ],
+  "hover": {
+    "before": 161.5,
+    "after": 199.5
+  },
+  "fontAwesomeIcons": 4,
+  "gameScreenshots": 43
+}

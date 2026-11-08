@@ -1,0 +1,69 @@
+/* Bài 2: định dạng văn bản và xử lý tràn. */
+.ueh-text { color: #0000d2; text-align: center; font-size: 30px; font-weight: 700; text-decoration: underline; }
+.faculty-text { color: rgb(255 0 0 / 50%); text-align: right; font-style: italic; font-size: 15px; background: #d9d9d9; border: 3px dotted #ffda00; border-radius: 11px; padding: 12px; }
+.bit-wordmark { display: inline-block; padding: 12px 20px; background: #dce5aa; color: #d0f442; font: 800 clamp(1.85rem, 7vw, 3rem)/1.15 Arial, sans-serif; text-shadow: 3px 2px 1px #a00805, 6px 4px 4px #8a180b, 0 0 14px #91321f; }
+.logo-wall { min-height: 165px; border: 1px solid #c8d7db; background: #f7faf9 url("../images/bit-logo.png") repeat fixed; background-size: 30px auto; }
+.overflow-examples { display: grid; gap: 14px; }
+.overflow-example { min-width: 0; padding: 12px; border: 1px solid #d8e4e8; overflow-x: auto; }
+.overflow-example h3 { margin-top: 0; font-size: 1rem; }
+.sample-text { width: 100px; height: 50px; margin: 0; border: 1px solid #087a72; background: #e4f6ee; font-size: 14px; }
+.clip-text { overflow: hidden; }
+.ellipsis-text { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.nowrap-text { white-space: nowrap; }
+
+/* Bài 4: các mục inline-block theo mẫu. */
+.course-menu { margin: 0; padding: 0; list-style: none; text-align: center; font-family: "Times New Roman", serif; }
+.course-menu li { display: inline-block; width: 112px; margin: 3px 2px; background: aqua; font-size: 24px; }
+.course-menu a { display: block; color: #0000ee; }
+
+/* Bài 5: khối hosting. */
+.best-shared { text-align: center; font-family: Arial, sans-serif; color: #26292a; }
+.best-shared .logo img { width: 200px; vertical-align: middle; }
+.best-shared h2 { margin: 20px 0; font-size: clamp(1.8rem, 4.5vw, 2.9rem); font-weight: 400; }
+.best-shared strong { color: #00a8e4; }
+.best-shared .lead-text { margin: 0 0 24px; }
+.btn-list { padding: 0; list-style: none; }
+.btn-list li { display: inline-block; margin: 5px 8px; }
+.btn-list a { display: inline-block; min-width: 142px; padding: 14px 20px; border-radius: 4px; background: #2b2e2f; color: white; text-decoration: none; }
+.btn-list a:hover { background: #3f4b4d; }
+
+/* Bài 6: danh mục và lưới chín ảnh. */
+.portfolio { text-align: center; background: #f6f6f6; font-family: Arial, sans-serif; }
+.portfolio h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+.portfolio h2::after { display: block; content: ""; width: 54px; height: 2px; margin: 12px auto 0; background: #28a49c; }
+.list-tab { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; padding: 0; list-style: none; font-weight: 700; }
+.list-tab a { color: #313738; text-decoration: none; }
+.list-tab li:first-child a, .list-tab a:hover { color: #137d75; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0; margin: 24px 0 0; list-style: none; }
+.gallery img { display: block; width: 100%; aspect-ratio: 350 / 260; object-fit: cover; }
+
+/* Bài 7: header và footer chiếm toàn bộ chiều ngang. */
+.layout-demo { width: min(570px, 100%); margin-inline: auto; font-family: Arial, sans-serif; color: #181818; }
+#wrapper { display: grid; grid-template-columns: 1fr 4fr; grid-template-rows: 65px 290px 48px; gap: 8px; padding: 8px; border: 3px solid #171717; background: white; box-shadow: -14px 14px 16px #0003; }
+#wrapper > * { padding: 10px; border: 2px solid #171717; }
+#wrapper > header, #wrapper > footer { grid-column: 1 / -1; }
+
+/* Bài 8b: giữ khung và lớp của tệp css2. */
+#root { width: min(1024px, 100%); margin: 0 auto; text-align: center; font-family: Georgia, serif; }
+#site-header { margin: 0 0 28px; padding: 13px 8px; background: #c7c7c7; color: #fff; text-shadow: 2px 2px 2px #242424; font-size: clamp(1.3rem, 3vw, 2rem); }
+#site-header span { display: inline-block; padding-left: 58px; background: url("../images/bat/logo.png") left center / 48px auto no-repeat; }
+.superheroes { display: flex; justify-content: center; align-items: flex-end; flex-wrap: wrap; gap: 5px; padding: 0; margin: 0; list-style: none; }
+.superheroes li { position: relative; width: 17%; flex: 0 0 auto; transition: width .2s ease; }
+.superheroes li:hover, .superheroes li:focus-within { width: 21%; }
+.superheroes img { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid #b4bec3; border-radius: 12px; }
+.hero-header { position: absolute; inset: 1px 1px auto; padding: 6px 4px; border-radius: 11px 11px 0 0; background: #111a; color: #fff; }
+.superheroes a { display: block; width: 100%; padding: 8px 4px; background: #4a4a4a; color: #fff; text-decoration: none; opacity: 0; pointer-events: none; }
+.superheroes li:hover a, .superheroes li:focus-within a { opacity: 1; pointer-events: auto; text-decoration: underline; }
+@media (max-width: 660px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .superheroes li { width: 43%; }
+  .superheroes li:hover, .superheroes li:focus-within { width: 48%; }
+}
+@media (hover: none) { .superheroes a { opacity: 1; pointer-events: auto; text-decoration: underline; } }
+@media (prefers-reduced-motion: reduce) { .superheroes li { transition: none; } }
+
+/* Bài 9: biểu tượng có nhãn chữ bên cạnh. */
+.icon-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 12px; padding: 0; list-style: none; }
+.icon-list a { display: flex; align-items: center; gap: 12px; padding: 16px; background: #eef8f6; border-radius: 10px; text-decoration: none; font-weight: 700; }
+.icon-list i { font-size: 1.35rem; }
+.icon-list a:hover { background: #d9f0eb; }

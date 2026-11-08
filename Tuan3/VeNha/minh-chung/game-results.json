@@ -1,0 +1,393 @@
+{
+  "date": "2026-11-08",
+  "actor": "AI Codex, lượt chạy minh họa trên trang game gốc",
+  "records": [
+    {
+      "game": "CSS Diner",
+      "level": "1",
+      "selector": "plate",
+      "prompt": "Select the plates",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-01.png",
+      "confirmed": 1
+    },
+    {
+      "game": "CSS Diner",
+      "level": "2",
+      "selector": "bento",
+      "prompt": "Select the bento boxes",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-02.png",
+      "confirmed": 2
+    },
+    {
+      "game": "CSS Diner",
+      "level": "3",
+      "selector": "#fancy",
+      "prompt": "Select the fancy plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-03.png",
+      "confirmed": 3
+    },
+    {
+      "game": "CSS Diner",
+      "level": "4",
+      "selector": "plate apple",
+      "prompt": "Select the apple on the plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-04.png",
+      "confirmed": 4
+    },
+    {
+      "game": "CSS Diner",
+      "level": "5",
+      "selector": "#fancy pickle",
+      "prompt": "Select the pickle on the fancy plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-05.png",
+      "confirmed": 5
+    },
+    {
+      "game": "CSS Diner",
+      "level": "6",
+      "selector": "apple.small",
+      "prompt": "Select the small apples",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-06.png",
+      "confirmed": 6
+    },
+    {
+      "game": "CSS Diner",
+      "level": "7",
+      "selector": "orange.small",
+      "prompt": "Select the small oranges",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-07.png",
+      "confirmed": 7
+    },
+    {
+      "game": "CSS Diner",
+      "level": "8",
+      "selector": "bento orange.small",
+      "prompt": "Select the small oranges in the bentos",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-08.png",
+      "confirmed": 8
+    },
+    {
+      "game": "CSS Diner",
+      "level": "9",
+      "selector": "plate, bento",
+      "prompt": "Select all the plates and bentos",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-09.png",
+      "confirmed": 9
+    },
+    {
+      "game": "CSS Diner",
+      "level": "10",
+      "selector": "*",
+      "prompt": "Select all the things!",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-10.png",
+      "confirmed": 10
+    },
+    {
+      "game": "CSS Diner",
+      "level": "11",
+      "selector": "plate *",
+      "prompt": "Select everything on a plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-11.png",
+      "confirmed": 11
+    },
+    {
+      "game": "CSS Diner",
+      "level": "12",
+      "selector": "plate + apple",
+      "prompt": "Select every apple that's next to a plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-12.png",
+      "confirmed": 12
+    },
+    {
+      "game": "CSS Diner",
+      "level": "13",
+      "selector": "bento ~ pickle",
+      "prompt": "Select the pickles beside the bento",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-13.png",
+      "confirmed": 13
+    },
+    {
+      "game": "CSS Diner",
+      "level": "14",
+      "selector": "plate > apple",
+      "prompt": "Select the apple directly on a plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-14.png",
+      "confirmed": 14
+    },
+    {
+      "game": "CSS Diner",
+      "level": "15",
+      "selector": "plate :first-child",
+      "prompt": "Select the top orange",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-15.png",
+      "confirmed": 15
+    },
+    {
+      "game": "CSS Diner",
+      "level": "16",
+      "selector": "plate :only-child",
+      "prompt": "Select the apple and the pickle on the plates",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-16.png",
+      "confirmed": 16
+    },
+    {
+      "game": "CSS Diner",
+      "level": "17",
+      "selector": ".small:last-child",
+      "prompt": "Select the small apple and the pickle",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-17.png",
+      "confirmed": 17
+    },
+    {
+      "game": "CSS Diner",
+      "level": "18",
+      "selector": ":nth-child(3)",
+      "prompt": "Select the 3rd plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-18.png",
+      "confirmed": 18
+    },
+    {
+      "game": "CSS Diner",
+      "level": "19",
+      "selector": "bento:nth-last-child(3)",
+      "prompt": "Select the 1st bento",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-19.png",
+      "confirmed": 19
+    },
+    {
+      "game": "CSS Diner",
+      "level": "20",
+      "selector": "apple:first-of-type",
+      "prompt": "Select first apple",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-20.png",
+      "confirmed": 20
+    },
+    {
+      "game": "CSS Diner",
+      "level": "21",
+      "selector": "plate:nth-of-type(even)",
+      "prompt": "Select all even plates",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-21.png",
+      "confirmed": 21
+    },
+    {
+      "game": "CSS Diner",
+      "level": "22",
+      "selector": "plate:nth-of-type(2n + 3)",
+      "prompt": "Select every 2nd plate, starting from the 3rd",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-22.png",
+      "confirmed": 22
+    },
+    {
+      "game": "CSS Diner",
+      "level": "23",
+      "selector": "apple:only-of-type",
+      "prompt": "Select the apple on the middle plate",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-23.png",
+      "confirmed": 23
+    },
+    {
+      "game": "CSS Diner",
+      "level": "24",
+      "selector": ".small:last-of-type",
+      "prompt": "Select the last apple and orange",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-24.png",
+      "confirmed": 24
+    },
+    {
+      "game": "CSS Diner",
+      "level": "25",
+      "selector": "bento:empty",
+      "prompt": "Select the empty bentos",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-25.png",
+      "confirmed": 25
+    },
+    {
+      "game": "CSS Diner",
+      "level": "26",
+      "selector": "apple:not(.small)",
+      "prompt": "Select the big apples",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-26.png",
+      "confirmed": 26
+    },
+    {
+      "game": "CSS Diner",
+      "level": "27",
+      "selector": "[for]",
+      "prompt": "Select the items for someone",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-27.png",
+      "confirmed": 27
+    },
+    {
+      "game": "CSS Diner",
+      "level": "28",
+      "selector": "plate[for]",
+      "prompt": "Select the plates for someone",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-28.png",
+      "confirmed": 28
+    },
+    {
+      "game": "CSS Diner",
+      "level": "29",
+      "selector": "[for=\"Vitaly\"]",
+      "prompt": "Select Vitaly's meal",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-29.png",
+      "confirmed": 29
+    },
+    {
+      "game": "CSS Diner",
+      "level": "30",
+      "selector": "[for^=\"Sa\"]",
+      "prompt": "Select the items for names that start with 'Sa'",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-30.png",
+      "confirmed": 30
+    },
+    {
+      "game": "CSS Diner",
+      "level": "31",
+      "selector": "[for$=\"ato\"]",
+      "prompt": "Select the items for names that end with 'ato'",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-31.png",
+      "confirmed": 31
+    },
+    {
+      "game": "CSS Diner",
+      "level": "32",
+      "selector": "[for*=\"obb\"]",
+      "prompt": "Select the meals for names that contain 'obb'",
+      "url": "https://flukeout.github.io/",
+      "file": "css-diner/level-32.png",
+      "confirmed": 32
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "Intro",
+      "selector": "li:first-child",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/intro.png",
+      "confirmed": 1
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "1",
+      "selector": "p:not(.foo)",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-01.png",
+      "confirmed": 2
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "2",
+      "selector": "li:nth-child(2n + 3)",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-02.png",
+      "confirmed": 3
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "3",
+      "selector": "div > *",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-03.png",
+      "confirmed": 4
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "4",
+      "selector": "span[data-item]",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-04.png",
+      "confirmed": 5
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "5",
+      "selector": "p ~ span",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-05.png",
+      "confirmed": 6
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "6",
+      "selector": ":enabled",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-06.png",
+      "confirmed": 7
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "7",
+      "selector": "#one, #two, #five, #six, #nine",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-07.png",
+      "confirmed": 8
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "8",
+      "selector": "a + span",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-08.png",
+      "confirmed": 9
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "9",
+      "selector": "#foo > .foo",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-09.png",
+      "confirmed": 10
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "10",
+      "selector": "div div span + code:not(.foo)",
+      "prompt": "Chọn đúng các phần tử được đánh dấu",
+      "url": "https://css-speedrun.netlify.app/",
+      "file": "css-speedrun/level-10.png",
+      "confirmed": 11
+    }
+  ]
+}

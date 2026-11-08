@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thực hành CSS selector | Nguyễn Thanh Liêm</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+  <header class="bar"><div class="shell"><a href="index.html">← Bài tập CSS tuần 3</a></div></header>
+  <main class="lesson shell">
+    <div class="lesson-heading">
+      <p class="kicker">Bài 01</p>
+      <h1>Thực hành CSS selector</h1>
+      <p>Các ảnh được chụp sau khi game xác nhận đáp án trong lượt chạy minh họa do AI hỗ trợ.</p>
+    </div>
+    <section class="game-group">
+      <h2>CSS Diner</h2>
+      <p>32 màn có ảnh. <a href="https://flukeout.github.io/">Mở game để luyện</a></p>
+      <div class="levels-list">
+        <article class="level">
+          <h3>Level 1</h3>
+          <p>Select the plates</p>
+          <code>plate</code>
+          <a href="minh-chung/css-diner/level-01.png"><img src="minh-chung/css-diner/level-01.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 1"></a>
+        </article>
+        <article class="level">
+          <h3>Level 2</h3>
+          <p>Select the bento boxes</p>
+          <code>bento</code>
+          <a href="minh-chung/css-diner/level-02.png"><img src="minh-chung/css-diner/level-02.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 2"></a>
+        </article>
+        <article class="level">
+          <h3>Level 3</h3>
+          <p>Select the fancy plate</p>
+          <code>#fancy</code>
+          <a href="minh-chung/css-diner/level-03.png"><img src="minh-chung/css-diner/level-03.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 3"></a>
+        </article>
+        <article class="level">
+          <h3>Level 4</h3>
+          <p>Select the apple on the plate</p>
+          <code>plate apple</code>
+          <a href="minh-chung/css-diner/level-04.png"><img src="minh-chung/css-diner/level-04.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 4"></a>
+        </article>
+        <article class="level">
+          <h3>Level 5</h3>
+          <p>Select the pickle on the fancy plate</p>
+          <code>#fancy pickle</code>
+          <a href="minh-chung/css-diner/level-05.png"><img src="minh-chung/css-diner/level-05.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 5"></a>
+        </article>
+        <article class="level">
+          <h3>Level 6</h3>
+          <p>Select the small apples</p>
+          <code>apple.small</code>
+          <a href="minh-chung/css-diner/level-06.png"><img src="minh-chung/css-diner/level-06.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 6"></a>
+        </article>
+        <article class="level">
+          <h3>Level 7</h3>
+          <p>Select the small oranges</p>
+          <code>orange.small</code>
+          <a href="minh-chung/css-diner/level-07.png"><img src="minh-chung/css-diner/level-07.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 7"></a>
+        </article>
+        <article class="level">
+          <h3>Level 8</h3>
+          <p>Select the small oranges in the bentos</p>
+          <code>bento orange.small</code>
+          <a href="minh-chung/css-diner/level-08.png"><img src="minh-chung/css-diner/level-08.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 8"></a>
+        </article>
+        <article class="level">
+          <h3>Level 9</h3>
+          <p>Select all the plates and bentos</p>
+          <code>plate, bento</code>
+          <a href="minh-chung/css-diner/level-09.png"><img src="minh-chung/css-diner/level-09.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 9"></a>
+        </article>
+        <article class="level">
+          <h3>Level 10</h3>
+          <p>Select all the things!</p>
+          <code>*</code>
+          <a href="minh-chung/css-diner/level-10.png"><img src="minh-chung/css-diner/level-10.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 10"></a>
+        </article>
+        <article class="level">
+          <h3>Level 11</h3>
+          <p>Select everything on a plate</p>
+          <code>plate *</code>
+          <a href="minh-chung/css-diner/level-11.png"><img src="minh-chung/css-diner/level-11.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 11"></a>
+        </article>
+        <article class="level">
+          <h3>Level 12</h3>
+          <p>Select every apple that&#x27;s next to a plate</p>
+          <code>plate + apple</code>
+          <a href="minh-chung/css-diner/level-12.png"><img src="minh-chung/css-diner/level-12.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 12"></a>
+        </article>
+        <article class="level">
+          <h3>Level 13</h3>
+          <p>Select the pickles beside the bento</p>
+          <code>bento ~ pickle</code>
+          <a href="minh-chung/css-diner/level-13.png"><img src="minh-chung/css-diner/level-13.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 13"></a>
+        </article>
+        <article class="level">
+          <h3>Level 14</h3>
+          <p>Select the apple directly on a plate</p>
+          <code>plate &gt; apple</code>
+          <a href="minh-chung/css-diner/level-14.png"><img src="minh-chung/css-diner/level-14.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 14"></a>
+        </article>
+        <article class="level">
+          <h3>Level 15</h3>
+          <p>Select the top orange</p>
+          <code>plate :first-child</code>
+          <a href="minh-chung/css-diner/level-15.png"><img src="minh-chung/css-diner/level-15.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 15"></a>
+        </article>
+        <article class="level">
+          <h3>Level 16</h3>
+          <p>Select the apple and the pickle on the plates</p>
+          <code>plate :only-child</code>
+          <a href="minh-chung/css-diner/level-16.png"><img src="minh-chung/css-diner/level-16.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 16"></a>
+        </article>
+        <article class="level">
+          <h3>Level 17</h3>
+          <p>Select the small apple and the pickle</p>
+          <code>.small:last-child</code>
+          <a href="minh-chung/css-diner/level-17.png"><img src="minh-chung/css-diner/level-17.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 17"></a>
+        </article>
+        <article class="level">
+          <h3>Level 18</h3>
+          <p>Select the 3rd plate</p>
+          <code>:nth-child(3)</code>
+          <a href="minh-chung/css-diner/level-18.png"><img src="minh-chung/css-diner/level-18.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 18"></a>
+        </article>
+        <article class="level">
+          <h3>Level 19</h3>
+          <p>Select the 1st bento</p>
+          <code>bento:nth-last-child(3)</code>
+          <a href="minh-chung/css-diner/level-19.png"><img src="minh-chung/css-diner/level-19.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 19"></a>
+        </article>
+        <article class="level">
+          <h3>Level 20</h3>
+          <p>Select first apple</p>
+          <code>apple:first-of-type</code>
+          <a href="minh-chung/css-diner/level-20.png"><img src="minh-chung/css-diner/level-20.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 20"></a>
+        </article>
+        <article class="level">
+          <h3>Level 21</h3>
+          <p>Select all even plates</p>
+          <code>plate:nth-of-type(even)</code>
+          <a href="minh-chung/css-diner/level-21.png"><img src="minh-chung/css-diner/level-21.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 21"></a>
+        </article>
+        <article class="level">
+          <h3>Level 22</h3>
+          <p>Select every 2nd plate, starting from the 3rd</p>
+          <code>plate:nth-of-type(2n + 3)</code>
+          <a href="minh-chung/css-diner/level-22.png"><img src="minh-chung/css-diner/level-22.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 22"></a>
+        </article>
+        <article class="level">
+          <h3>Level 23</h3>
+          <p>Select the apple on the middle plate</p>
+          <code>apple:only-of-type</code>
+          <a href="minh-chung/css-diner/level-23.png"><img src="minh-chung/css-diner/level-23.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 23"></a>
+        </article>
+        <article class="level">
+          <h3>Level 24</h3>
+          <p>Select the last apple and orange</p>
+          <code>.small:last-of-type</code>
+          <a href="minh-chung/css-diner/level-24.png"><img src="minh-chung/css-diner/level-24.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 24"></a>
+        </article>
+        <article class="level">
+          <h3>Level 25</h3>
+          <p>Select the empty bentos</p>
+          <code>bento:empty</code>
+          <a href="minh-chung/css-diner/level-25.png"><img src="minh-chung/css-diner/level-25.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 25"></a>
+        </article>
+        <article class="level">
+          <h3>Level 26</h3>
+          <p>Select the big apples</p>
+          <code>apple:not(.small)</code>
+          <a href="minh-chung/css-diner/level-26.png"><img src="minh-chung/css-diner/level-26.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 26"></a>
+        </article>
+        <article class="level">
+          <h3>Level 27</h3>
+          <p>Select the items for someone</p>
+          <code>[for]</code>
+          <a href="minh-chung/css-diner/level-27.png"><img src="minh-chung/css-diner/level-27.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 27"></a>
+        </article>
+        <article class="level">
+          <h3>Level 28</h3>
+          <p>Select the plates for someone</p>
+          <code>plate[for]</code>
+          <a href="minh-chung/css-diner/level-28.png"><img src="minh-chung/css-diner/level-28.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 28"></a>
+        </article>
+        <article class="level">
+          <h3>Level 29</h3>
+          <p>Select Vitaly&#x27;s meal</p>
+          <code>[for=&quot;Vitaly&quot;]</code>
+          <a href="minh-chung/css-diner/level-29.png"><img src="minh-chung/css-diner/level-29.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 29"></a>
+        </article>
+        <article class="level">
+          <h3>Level 30</h3>
+          <p>Select the items for names that start with &#x27;Sa&#x27;</p>
+          <code>[for^=&quot;Sa&quot;]</code>
+          <a href="minh-chung/css-diner/level-30.png"><img src="minh-chung/css-diner/level-30.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 30"></a>
+        </article>
+        <article class="level">
+          <h3>Level 31</h3>
+          <p>Select the items for names that end with &#x27;ato&#x27;</p>
+          <code>[for$=&quot;ato&quot;]</code>
+          <a href="minh-chung/css-diner/level-31.png"><img src="minh-chung/css-diner/level-31.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 31"></a>
+        </article>
+        <article class="level">
+          <h3>Level 32</h3>
+          <p>Select the meals for names that contain &#x27;obb&#x27;</p>
+          <code>[for*=&quot;obb&quot;]</code>
+          <a href="minh-chung/css-diner/level-32.png"><img src="minh-chung/css-diner/level-32.png" loading="lazy" alt="CSS Diner sau khi xác nhận Level 32"></a>
+        </article>
+      </div>
+    </section>
+    <section class="game-group">
+      <h2>CSS Speedrun</h2>
+      <p>11 màn có ảnh. <a href="https://css-speedrun.netlify.app/">Mở game để luyện</a></p>
+      <div class="levels-list">
+        <article class="level">
+          <h3>Intro</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>li:first-child</code>
+          <a href="minh-chung/css-speedrun/intro.png"><img src="minh-chung/css-speedrun/intro.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Intro"></a>
+        </article>
+        <article class="level">
+          <h3>Level 1</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>p:not(.foo)</code>
+          <a href="minh-chung/css-speedrun/level-01.png"><img src="minh-chung/css-speedrun/level-01.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 1"></a>
+        </article>
+        <article class="level">
+          <h3>Level 2</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>li:nth-child(2n + 3)</code>
+          <a href="minh-chung/css-speedrun/level-02.png"><img src="minh-chung/css-speedrun/level-02.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 2"></a>
+        </article>
+        <article class="level">
+          <h3>Level 3</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>div &gt; *</code>
+          <a href="minh-chung/css-speedrun/level-03.png"><img src="minh-chung/css-speedrun/level-03.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 3"></a>
+        </article>
+        <article class="level">
+          <h3>Level 4</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>span[data-item]</code>
+          <a href="minh-chung/css-speedrun/level-04.png"><img src="minh-chung/css-speedrun/level-04.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 4"></a>
+        </article>
+        <article class="level">
+          <h3>Level 5</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>p ~ span</code>
+          <a href="minh-chung/css-speedrun/level-05.png"><img src="minh-chung/css-speedrun/level-05.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 5"></a>
+        </article>
+        <article class="level">
+          <h3>Level 6</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>:enabled</code>
+          <a href="minh-chung/css-speedrun/level-06.png"><img src="minh-chung/css-speedrun/level-06.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 6"></a>
+        </article>
+        <article class="level">
+          <h3>Level 7</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>#one, #two, #five, #six, #nine</code>
+          <a href="minh-chung/css-speedrun/level-07.png"><img src="minh-chung/css-speedrun/level-07.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 7"></a>
+        </article>
+        <article class="level">
+          <h3>Level 8</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>a + span</code>
+          <a href="minh-chung/css-speedrun/level-08.png"><img src="minh-chung/css-speedrun/level-08.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 8"></a>
+        </article>
+        <article class="level">
+          <h3>Level 9</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>#foo &gt; .foo</code>
+          <a href="minh-chung/css-speedrun/level-09.png"><img src="minh-chung/css-speedrun/level-09.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 9"></a>
+        </article>
+        <article class="level">
+          <h3>Level 10</h3>
+          <p>Chọn đúng các phần tử được đánh dấu</p>
+          <code>div div span + code:not(.foo)</code>
+          <a href="minh-chung/css-speedrun/level-10.png"><img src="minh-chung/css-speedrun/level-10.png" loading="lazy" alt="CSS Speedrun sau khi xác nhận Level 10"></a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="shell">Nguyễn Thanh Liêm · 31241023460</footer>
+</body>
+</html>
