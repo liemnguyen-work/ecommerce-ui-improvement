@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Anh Hùng Javascript vs Rồng Già</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        h1 { color: #e94560; text-shadow: 2px 2px #0f3460; margin-bottom: 5px; }
+        .info-bar {
+            background: #16213e;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #0f3460;
+            margin-bottom: 15px;
+            text-align: center;
+            max-width: 800px;
+            font-size: 14px;
+        }
+        #arena {
+            width: 800px;
+            height: 360px;
+            background: linear-gradient(to bottom, #2c3e50, #4ca1af 70%, #2c2c2c 70%);
+            border: 4px solid #e94560;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            transition: transform 0.1s;
+        }
+        .shake { animation: shakeAnim 0.4s ease-in-out; }
+        @keyframes shakeAnim {
+            0%, 100% { transform: translate(0, 0); }
+            20% { transform: translate(-10px, 5px); }
+            40% { transform: translate(10px, -5px); }
+            60% { transform: translate(-8px, -5px); }
+            80% { transform: translate(8px, 5px); }
+        }
+        .fighter {
+            position: absolute;
+            bottom: 40px;
+            width: 180px;
+            text-align: center;
+            transition: transform 0.2s, filter 0.2s;
+        }
+        #hero-box { left: 80px; }
+        #dragon-box { right: 80px; }
+        .sprite {
+            font-size: 90px;
+            line-height: 100px;
+            user-select: none;
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.6));
+        }
+        .hero-attack { transform: translateX(180px) scale(1.15); }
+        .dragon-attack { transform: translateX(-180px) scale(1.15); }
+        .hurt {
+            filter: brightness(2) sepia(1) hue-rotate(-50deg) saturate(5) !important;
+            animation: hurtAnim 0.3s;
+        }
+        @keyframes hurtAnim {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .dodge { opacity: 0.4; transform: translateY(-30px); }
+        .hp-container {
+            width: 100%;
+            background: #333;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            height: 18px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .hp-bar {
+            height: 100%;
+            background: #2ecc71;
+            width: 100%;
+            transition: width 0.3s ease;
+        }
+        #dragon-hp-bar { background: #e74c3c; }
+        .floating-text {
+            position: absolute;
+            font-weight: bold;
+            font-size: 24px;
+            pointer-events: none;
+            animation: floatUp 1s forwards;
+            text-shadow: 2px 2px 4px #000;
+            z-index: 10;
+        }
+        @keyframes floatUp {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(-70px) scale(1.3); }
+        }
+        #effect-overlay {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 70px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+        .controls { margin-top: 15px; display: flex; gap: 15px; }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #e94560;
+            color: white;
+            box-shadow: 0 4px #900c3f;
+        }
+        button:hover { background: #ff5773; }
+        button:disabled { background: #555; box-shadow: none; cursor: not-allowed; }
+        #combat-log {
+            width: 800px;
+            height: 140px;
+            background: #0f3460;
+            border-radius: 8px;
+            margin-top: 15px;
+            padding: 10px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 14px;
+            border: 1px solid #e94560;
+        }
+        .log-crit { color: #f1c40f; font-weight: bold; }
+        .log-miss { color: #95a5a6; font-style: italic; }
+        .log-dmg { color: #ff7675; }
+    </style>
+</head>
+<body>
+
+    <h1>🛡️ ANH HÙNG JAVASCRIPT VS RỒNG GIÀ 🐉</h1>
+    <div class="info-bar" id="hero-info">Đang khởi tạo nhân vật...</div>
+
+    <div id="arena">
+        <div id="effect-overlay">💥</div>
+
+        <div class="fighter" id="hero-box">
+            <div class="sprite" id="hero-sprite">🦸‍♂️🛡️</div>
+            <div id="hero-name-label">Anh Hùng (Lv.5)</div>
+            <div class="hp-container"><div class="hp-bar" id="hero-hp-bar"></div></div>
+            <div id="hero-hp-text">105 / 105</div>
+        </div>
+
+        <div class="fighter" id="dragon-box">
+            <div class="sprite" id="dragon-sprite">🐉🔥</div>
+            <div>Rồng Già</div>
+            <div class="hp-container"><div class="hp-bar" id="dragon-hp-bar"></div></div>
+            <div id="dragon-hp-text">600 / 600</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="btn-start" onclick="startSetup()">1. Tạo Nhân Vật & Nhập Tên</button>
+        <button id="btn-turn" onclick="playTurn()" disabled>2. Đánh Lượt Tiếp Theo ⚔️</button>
+        <button id="btn-auto" onclick="toggleAuto()" disabled>Tự Động Đánh 🔄</button>
+    </div>
+
+    <div id="combat-log">Nhấn "1. Tạo Nhân Vật & Nhập Tên" để bắt đầu trận chiến...</div>
+
+<script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playSound(type) {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        const now = audioCtx.currentTime;
+
+        if (type === 'sword') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(600, now);
+            osc.frequency.exponentialRampToValueAtTime(100, now + 0.15);
+            gain.gain.setValueAtTime(0.3, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+            osc.start(now); osc.stop(now + 0.15);
+        } else if (type === 'crit') {
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(800, now);
+            osc.frequency.exponentialRampToValueAtTime(60, now + 0.35);
+            gain.gain.setValueAtTime(0.4, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+            osc.start(now); osc.stop(now + 0.35);
+        } else if (type === 'fire') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(150, now);
+            osc.frequency.linearRampToValueAtTime(40, now + 0.4);
+            gain.gain.setValueAtTime(0.4, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+            osc.start(now); osc.stop(now + 0.4);
+        } else if (type === 'miss') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(300, now);
+            osc.frequency.linearRampToValueAtTime(500, now + 0.12);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12);
+            osc.start(now); osc.stop(now + 0.12);
+        } else if (type === 'win') {
+            [523.25, 659.25, 783.99, 1046.50].forEach((freq, idx) => {
+                const o = audioCtx.createOscillator();
+                const g = audioCtx.createGain();
+                o.connect(g); g.connect(audioCtx.destination);
+                o.type = 'triangle';
+                o.frequency.setValueAtTime(freq, now + idx * 0.12);
+                g.gain.setValueAtTime(0.3, now + idx * 0.12);
+                g.gain.exponentialRampToValueAtTime(0.01, now + idx * 0.12 + 0.3);
+                o.start(now + idx * 0.12); o.stop(now + idx * 0.12 + 0.3);
+            });
+        }
+    }
+
+    var name = "Nguyễn Thanh Liêm";
+    var MSSV = 31241023460;
+    var level = 1, xp = 0, skillPoint = 5;
+    var strength = 0, agility = 0, intel = 0;
+    var maxHeroHealth = 105, health = 105;
+    var maxDragonHealth = 600, dragonHealth = 600;
+    var dragonStr = 100, dragonAgi = 15, dragonInt = 80;
+    var gameContinue = false;
+    var autoInterval = null;
+
+    function logMsg(msg, className = "") {
+        const logBox = document.getElementById("combat-log");
+        logBox.innerHTML += `<div class="${className}">> ${msg}</div>`;
+        logBox.scrollTop = logBox.scrollHeight;
+    }
+
+    function showFloatingText(targetId, text, color) {
+        const target = document.getElementById(targetId);
+        const el = document.createElement("div");
+        el.className = "floating-text";
+        el.style.color = color;
+        el.style.left = (target.offsetLeft + 40) + "px";
+        el.style.top = (target.offsetTop - 20) + "px";
+        el.innerText = text;
+        document.getElementById("arena").appendChild(el);
+        setTimeout(() => el.remove(), 1000);
+    }
+
+    function triggerScreenShake() {
+        const arena = document.getElementById("arena");
+        arena.classList.remove("shake");
+        void arena.offsetWidth;
+        arena.classList.add("shake");
+    }
+
+    function showCenterEffect(emoji) {
+        const ef = document.getElementById("effect-overlay");
+        ef.innerText = emoji;
+        ef.style.opacity = 1;
+        ef.style.transform = "translate(-50%, -50%) scale(1.4)";
+        setTimeout(() => {
+            ef.style.opacity = 0;
+            ef.style.transform = "translate(-50%, -50%) scale(0.8)";
+        }, 350);
+    }
+
+    function updateBars() {
+        const hPct = Math.max(0, (health / maxHeroHealth) * 100);
+        const dPct = Math.max(0, (dragonHealth / maxDragonHealth) * 100);
+        document.getElementById("hero-hp-bar").style.width = hPct + "%";
+        document.getElementById("dragon-hp-bar").style.width = dPct + "%";
+        document.getElementById("hero-hp-text").innerText = `${Math.max(0, Math.round(health))} / ${maxHeroHealth}`;
+        document.getElementById("dragon-hp-text").innerText = `${Math.max(0, Math.round(dragonHealth))} / ${maxDragonHealth}`;
+    }
+
+    function startSetup() {
+        clearInterval(autoInterval);
+        autoInterval = null;
+        document.getElementById("btn-auto").innerText = "Tự Động Đánh 🔄";
+        document.getElementById("hero-sprite").innerText = "🦸‍♂️🛡️";
+        document.getElementById("dragon-sprite").innerText = "🐉🔥";
+        document.getElementById("combat-log").innerHTML = "";
+
+        level = 1; xp = 0; skillPoint = 5;
+        level++;
+        xp = 150 * (level - 1) + 200;
+        skillPoint = skillPoint + xp / 10;
+
+        strength = 0.6 * skillPoint + 0.1 * xp;
+        agility = 0.2 * skillPoint + 0.2 * xp;
+        intel = 0.2 * skillPoint + 10 * level;
+
+        level = 3;
+        xp = xp + 300;
+
+        var nhapTen = prompt("Hãy nhập tên bạn (Gợi ý: Nguyễn Thanh Liêm):", "Nguyễn Thanh Liêm");
+        if (nhapTen == name) {
+            logMsg("Chính xác! Bạn có trí nhớ rất tốt! (+5 Trí tuệ)", "log-crit");
+            intel += 5;
+        } else {
+            logMsg("Tệ thật! Tên chính mình mà không nhớ sao! (-5 Trí tuệ)", "log-dmg");
+            intel -= 5;
+        }
+
+        var chonVai = prompt('Bạn muốn chọn phân cấp nào?\na: Chiến Binh (+15 STR)\nb: Sát Thủ (+10 AGI, +5 INT)\nc: Thợ Săn (+15 INT)', 'a');
+        var phancap = "Tập Sự";
+        switch (chonVai) {
+            case "a":
+                phancap = "Chiến Binh"; strength += 15; agility -= 10; intel -= 5; break;
+            case "b":
+                phancap = "Sát Thủ"; strength -= 15; agility += 10; intel += 5; break;
+            case "c":
+                phancap = "Thợ Săn"; strength -= 15; intel += 15; break;
+            default:
+                logMsg("Lựa chọn không hợp lệ! Giữ nguyên chỉ số.");
+        }
+
+        level = 5;
+        xp = xp + 700;
+        health = level + 100;
+        maxHeroHealth = health;
+        dragonHealth = 600;
+        gameContinue = true;
+
+        document.getElementById("hero-name-label").innerText = `${phancap} (Lv.${level})`;
+        document.getElementById("hero-info").innerHTML = 
+            `<b>${name}</b> (MSSV: ${MSSV}) | Hệ: <b>${phancap}</b> | Sức mạnh: <b>${strength}</b> | Nhanh nhẹn: <b>${agility}</b> | Trí tuệ: <b>${intel}</b>`;
+        
+        updateBars();
+        document.getElementById("btn-turn").disabled = false;
+        document.getElementById("btn-auto").disabled = false;
+        logMsg(`Sẵn sàng chiến đấu với Rồng Già (Máu: ${dragonHealth}, Sức mạnh: ${dragonStr})!`);
+    }
+
+    function playTurn() {
+        if (!gameContinue) return;
+
+        const heroBox = document.getElementById("hero-box");
+        const dragonBox = document.getElementById("dragon-box");
+
+        heroBox.classList.add("hero-attack");
+        setTimeout(() => heroBox.classList.remove("hero-attack"), 250);
+
+        var heroHit = Math.random() * 100 > dragonAgi;
+        if (heroHit) {
+            dragonHealth -= strength;
+            playSound('sword');
+            showCenterEffect("⚔️💥");
+            dragonBox.classList.add("hurt");
+            setTimeout(() => dragonBox.classList.remove("hurt"), 300);
+            showFloatingText("dragon-box", `-${strength}`, "#ff4757");
+            logMsg(`TRẢM LONG! Bạn gây sát thương ${strength} điểm cho Rồng!`);
+
+            var heroCritical = Math.random() * 100 < intel;
+            if (heroCritical) {
+                let critDmg = strength * 2;
+                dragonHealth -= critDmg;
+                playSound('crit');
+                triggerScreenShake();
+                showFloatingText("dragon-box", `CHÍ MẠNG -${critDmg}!`, "#f1c40f");
+                logMsg(`CHÍ MẠNG! Bạn gây sát thương chí mạng thêm ${critDmg} điểm cho Rồng!`, "log-crit");
+            }
+        } else {
+            playSound('miss');
+            dragonBox.classList.add("dodge");
+            setTimeout(() => dragonBox.classList.remove("dodge"), 300);
+            showFloatingText("dragon-box", "XÍ HỤT!", "#bdc3c7");
+            logMsg("XÍ HỤT! Rồng đã lượn tránh được đòn tấn công của Bạn!", "log-miss");
+        }
+
+        updateBars();
+
+        if (dragonHealth <= 0) {
+            gameContinue = false;
+            clearInterval(autoInterval);
+            autoInterval = null;
+            document.getElementById("dragon-sprite").innerText = "💀🔥";
+            playSound('win');
+            showCenterEffect("🏆🎉");
+            logMsg("CHIẾN THẮNG!!! Rồng đã lên bàn thờ! Chúc mừng bạn đã chiến thắng!!!", "log-crit");
+            endButtons();
+            return;
+        }
+
+        setTimeout(() => {
+            if (!gameContinue) return;
+            dragonBox.classList.add("dragon-attack");
+            setTimeout(() => dragonBox.classList.remove("dragon-attack"), 250);
+
+            var dragonHit = Math.random() * 100 > agility;
+            if (dragonHit) {
+                health -= dragonStr;
+                playSound('fire');
+                triggerScreenShake();
+                showCenterEffect("🔥☄️");
+                heroBox.classList.add("hurt");
+                setTimeout(() => heroBox.classList.remove("hurt"), 300);
+                showFloatingText("hero-box", `-${dragonStr}`, "#ff4757");
+                logMsg(`HỎA CẦU! Rồng gây sát thương ${dragonStr} điểm cho Bạn!`, "log-dmg");
+
+                var dragonCritical = Math.random() * 100 < dragonInt;
+                if (dragonCritical) {
+                    let dCrit = dragonStr * 2;
+                    health -= dCrit;
+                    playSound('crit');
+                    showFloatingText("hero-box", `CHÍ MẠNG -${dCrit}!`, "#f1c40f");
+                    logMsg(`CHÍ MẠNG! Rồng gây sát thương chí mạng thêm ${dCrit} điểm cho Bạn!`, "log-crit");
+                }
+            } else {
+                playSound('miss');
+                heroBox.classList.add("dodge");
+                setTimeout(() => heroBox.classList.remove("dodge"), 300);
+                showFloatingText("hero-box", "NÉ ĐƯỢC!", "#2ecc71");
+                logMsg("XÍ HỤT! Bạn đã tránh được đòn tấn công từ Rồng!", "log-miss");
+            }
+
+            updateBars();
+
+            if (health <= 0) {
+                gameContinue = false;
+                clearInterval(autoInterval);
+                autoInterval = null;
+                document.getElementById("hero-sprite").innerText = "🍖🔥";
+                showCenterEffect("☠️");
+                logMsg("THẤT BẠI!!! Bạn đã có tên trên menu món tối của Rồng: Hiệp sĩ nướng lá lốt!", "log-dmg");
+                endButtons();
+            }
+        }, 500);
+    }
+
+    function toggleAuto() {
+        if (autoInterval) {
+            clearInterval(autoInterval);
+            autoInterval = null;
+            document.getElementById("btn-auto").innerText = "Tự Động Đánh 🔄";
+        } else {
+            playTurn();
+            autoInterval = setInterval(playTurn, 1100);
+            document.getElementById("btn-auto").innerText = "Dừng Tự Động ⏸️";
+        }
+    }
+
+    function endButtons() {
+        document.getElementById("btn-turn").disabled = true;
+        document.getElementById("btn-auto").disabled = true;
+        document.getElementById("btn-auto").innerText = "Tự Động Đánh 🔄";
+    }
+</script>
+</body>
+</html>
