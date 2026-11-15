@@ -36,4 +36,4 @@ tài nguyên hoặc dữ liệu từ dịch vụ bên ngoài.
 
 ## GitHub Pages
 
-Đường dẫn trang chủ: [Cập nhật sau khi triển khai GitHub Pages]
+Đường dẫn trang chủ: https://liemnguyen-work.github.io/ecommerce-ui-improvement/JavaScript-Labs/
