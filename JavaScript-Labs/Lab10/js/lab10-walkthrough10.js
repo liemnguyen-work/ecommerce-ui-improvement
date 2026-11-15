@@ -2,7 +2,7 @@ $(function () {
     $(".animLoading").hide();
 
     $("#consume").click(function () {
-       var url = "http://www.randyconnolly.com/funwebdev/services/travel/cities.php";
+       var url = "data/cities.json";
 
         $(".animLoading").show();
         $("#results ul").empty();
