@@ -1,0 +1,30 @@
+using System.ComponentModel.DataAnnotations;
+using _31241023460_NguyenThanhLiem.Data;
+
+namespace _31241023460_NguyenThanhLiem.Validation;
+
+public class GenreAttribute : ValidationAttribute
+{
+    protected override ValidationResult IsValid(
+        object value,
+        ValidationContext validationContext)
+    {
+        if (value == null ||
+            !int.TryParse(value.ToString(), out int genreID))
+        {
+            return new ValidationResult(
+                ErrorMessage ?? "Genre không hợp lệ");
+        }
+
+        var context = (ApplicationDbContext)validationContext
+            .GetService(typeof(ApplicationDbContext));
+
+        if (context.Genres.Any(x => x.ID == genreID))
+        {
+            return ValidationResult.Success;
+        }
+
+        return new ValidationResult(
+            ErrorMessage ?? "Genre không tồn tại");
+    }
+}

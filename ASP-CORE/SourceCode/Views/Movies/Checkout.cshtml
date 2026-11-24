@@ -1,0 +1,59 @@
+@model _31241023460_NguyenThanhLiem.Models.ShippingDetail
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h2>Check out now</h2>
+<p>Vui lòng nhập thông tin nhận hàng của bạn.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Checkout" method="post">
+            <div asp-validation-summary="All"
+                 class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Address" class="form-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Mobile" class="form-label"></label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile"
+                      class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Hoàn thành
+            </button>
+
+            <a asp-action="Cart" class="btn btn-outline-secondary">
+                Quay lại giỏ hàng
+            </a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

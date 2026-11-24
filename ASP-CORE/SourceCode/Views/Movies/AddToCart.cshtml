@@ -1,0 +1,107 @@
+@model _31241023460_NguyenThanhLiem.Models.HoaDon
+
+@{
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<h2>Giỏ hàng</h2>
+
+@if (TempData["CartError"] is string message)
+{
+    <div class="alert alert-danger">@message</div>
+}
+
+@if (Model.ChiTietHoaDons.Count == 0)
+{
+    <p>Giỏ hàng đang trống.</p>
+}
+
+<div class="table-responsive">
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>Số lượng</th>
+                <th>Phim</th>
+                <th class="text-end">Đơn giá</th>
+                <th class="text-end">Thành tiền</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.ChiTietHoaDons)
+            {
+                <tr>
+                    <td>
+                        <form asp-action="UpdateCartQuantity"
+                              method="post"
+                              class="d-flex gap-2">
+                            <input type="hidden"
+                                   name="maMovie"
+                                   value="@item.MaMovie" />
+
+                            <input type="number"
+                                   name="soLuong"
+                                   value="@item.SoLuong"
+                                   min="1" max="99" required
+                                   class="form-control form-control-sm"
+                                   style="width: 90px;"
+                                   aria-label="Số lượng phim" />
+
+                            <button type="submit"
+                                    class="btn btn-sm btn-outline-primary">
+                                Cập nhật
+                            </button>
+                        </form>
+                    </td>
+
+                    <td>@item.MovieObj.Title</td>
+
+                    <td class="text-end">
+                        @item.MovieObj.Price.ToString("N0") đ
+                    </td>
+
+                    <td class="text-end">
+                        @((item.SoLuong * item.MovieObj.Price).ToString("N0")) đ
+                    </td>
+
+                    <td>
+                        <form asp-action="RemoveFromCart" method="post">
+                            <input type="hidden"
+                                   name="maMovie"
+                                   value="@item.MaMovie" />
+
+                            <button type="submit"
+                                    class="btn btn-sm btn-outline-danger">
+                                Xóa
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="3" class="text-end">Tổng tiền:</th>
+                <th class="text-end">
+                    @Model.TongTien.ToString("N0") đ
+                </th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<a asp-action="Index" class="btn btn-primary">
+    Tiếp tục mua
+</a>
+
+@if (Model.ChiTietHoaDons.Count > 0)
+{
+    <a asp-controller="Movies"
+       asp-action="Checkout"
+       class="btn btn-success ms-2">
+        Thanh toán
+    </a>
+}
