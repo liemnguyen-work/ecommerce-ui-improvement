@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+**/publish/
+**/publish-*/
+**/.vs/
+**/.git/
+**/*.zip
+**/*.user
+**/*.suo
+**/app.db*
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
