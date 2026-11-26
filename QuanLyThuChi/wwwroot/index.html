@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quản lý thu chi cá nhân, giao dịch và thống kê theo tháng.">
+  <title>Sổ Thu Chi · Tài chính cá nhân</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Đến nội dung chính</a>
+  <aside class="sidebar" aria-label="Điều hướng chính">
+    <a class="brand" href="/" aria-label="Sổ Thu Chi, trang chủ"><span class="brand-mark" data-icon="wallet"></span><span>Sổ Thu Chi<small>TÀI CHÍNH CÁ NHÂN</small></span></a>
+    <div class="nav-label">KHÔNG GIAN CỦA BẠN</div>
+    <nav>
+      <button class="nav-item active" data-view="overview" aria-current="page"><span data-icon="grid"></span>Tổng quan</button>
+      <button class="nav-item" data-view="transactions"><span data-icon="list"></span>Giao dịch</button>
+      <button class="nav-item" data-view="reports"><span data-icon="chart"></span>Thống kê</button>
+    </nav>
+    <div class="sidebar-note"><span data-icon="leaf"></span><strong>Một thói quen nhỏ.</strong><p>Ghi lại giao dịch để biết tiền của bạn đang được sử dụng như thế nào.</p></div>
+    <div class="profile"><span class="avatar">L</span><div><strong>Thanh Liêm</strong><small>Không gian cá nhân</small></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span class="breadcrumb">Không gian cá nhân <span>/</span> <strong id="breadcrumb">Tổng quan</strong></span><span class="today" id="today-label"></span></header>
+    <main id="main">
+      <div class="page-heading"><div><div class="eyebrow">QUẢN LÝ THU CHI</div><h1 id="page-title">Tổng quan tài chính</h1><p id="page-subtitle">Theo dõi thu, chi và các khoản chờ thanh toán trong tháng.</p></div><button class="button primary" id="add-entry"><span data-icon="plus"></span>Thêm giao dịch</button></div>
+      <div class="error-banner" id="page-error" role="alert" hidden><span id="page-error-text"></span><button class="button small" id="retry">Thử lại</button></div>
+      <section class="period-toolbar" aria-label="Chọn kỳ thống kê"><div class="period-title"><span data-icon="calendar"></span><strong id="period-heading">Tháng này</strong><span class="badge subtle">VND</span></div><label class="month-control"><span>Tháng</span><input type="month" id="month" min="1900-01" max="2100-12" aria-label="Tháng thống kê" required></label></section>
+      <section class="summary-grid" id="summary" aria-label="Số liệu tháng đã chọn" aria-busy="true">
+        <article class="summary-card"><div class="card-top"><span>Tổng thu</span><span class="metric-icon green" data-icon="income"></span></div><strong class="metric" id="total-income">—</strong><small>Các khoản đã thu</small></article>
+        <article class="summary-card"><div class="card-top"><span>Tổng chi</span><span class="metric-icon orange" data-icon="expense"></span></div><strong class="metric" id="total-expense">—</strong><small>Các khoản đã thanh toán</small></article>
+        <article class="summary-card balance-card"><div class="card-top"><span>Chênh lệch thu chi</span><span class="metric-icon green" data-icon="wallet"></span></div><strong class="metric" id="total-balance">—</strong><small>Tổng thu − Tổng chi trong tháng</small></article>
+      </section>
+      <div class="pending-banner" id="pending-banner" hidden><span class="pending-icon" data-icon="clock"></span><div><strong id="pending-title"></strong><span id="pending-detail"></span></div><button class="text-button" id="show-pending">Xem các khoản chờ</button></div>
+      <section class="chart-grid" id="charts" aria-label="Biểu đồ thống kê">
+        <article class="panel trend-panel"><div class="panel-heading"><div><h2>Dòng tiền qua các tháng</h2><p>6 tháng gần nhất · Chỉ tính giao dịch đã hoàn tất</p></div><div class="legend"><span><i class="dot income"></i>Thu nhập</span><span><i class="dot expense"></i>Chi tiêu</span></div></div><div id="trend-chart" class="trend-chart" aria-live="polite"></div></article>
+        <article class="panel category-panel"><div class="panel-heading"><div><h2>Chi tiêu theo danh mục</h2><p>Tháng đã chọn · Các khoản đã chi</p></div></div><div id="category-chart" class="category-chart"></div></article>
+      </section>
+      <section class="panel transactions-panel" id="transactions" aria-label="Danh sách giao dịch">
+        <div class="panel-heading"><div><h2 id="transactions-title">Giao dịch trong tháng <span class="count-badge" id="entry-count">0</span></h2><p>Quản lý nội dung, số tiền và trạng thái giao dịch.</p></div><button class="button secondary small" id="export-csv"><span data-icon="download"></span>Xuất CSV</button></div>
+        <div class="filter-toolbar"><label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="Tìm nội dung, ghi chú…" aria-label="Tìm giao dịch" maxlength="120"></label><label class="filter-field"><span class="sr-only">Loại giao dịch</span><select id="filter-kind"><option value="">Tất cả thu chi</option value="income">Khoản thu</option><option value="expense">Khoản chi</option></select></label><label class="filter-field"><span class="sr-only">Danh mục</span><select id="filter-category"><option value="">Tất cả danh mục</option></select></label><label class="filter-field"><span class="sr-only">Trạng thái</span><select id="filter-status"><option value="">Tất cả trạng thái</option><option value="completed">Đã hoàn tất</option><option value="pending">Đang chờ</option></select></label><button class="icon-button" id="reset-filters" aria-label="Xóa bộ lọc" title="Xóa bộ lọc"><span data-icon="reset"></span></button></div>
+        <div class="table-scroll"><table><thead><tr><th scope="col">Giao dịch</th><th scope="col">Danh mục</th><th scope="col">Ngày</th><th scope="col">Trạng thái</th><th scope="col" class="money-column">Số tiền</th><th scope="col" class="actions-column">Thao tác</th></tr></thead><tbody id="entry-list"><tr><td colspan="6" class="loading-cell">Đang tải giao dịch…</td></tr></tbody></table></div>
+        <div class="empty-state" id="empty-state" hidden><span data-icon="receipt"></span><h3>Chưa có giao dịch phù hợp</h3><p>Thêm giao dịch mới hoặc thay đổi tháng và bộ lọc để xem dữ liệu.</p><button class="button secondary" id="empty-add">Thêm giao dịch</button></div>
+        <div class="table-footer"><span id="list-summary">Đang tải dữ liệu…</span><span id="filter-note">Thống kê phía trên tính toàn bộ tháng.</span></div>
+      </section>
+      <footer class="app-footer"><span>Sổ Thu Chi</span><span>Ghi chép rõ ràng, theo dõi chủ động.</span></footer>
+    </main>
+  </div>
+  <dialog id="entry-dialog" aria-labelledby="dialog-title"><form id="entry-form"><div class="dialog-heading"><div><div class="eyebrow">SỔ THU CHI</div><h2 id="dialog-title">Thêm giao dịch</h2></div><button class="icon-button close-dialog" type="button" aria-label="Đóng"><span data-icon="close"></span></button></div><p class="dialog-intro">Ghi lại một khoản thu hoặc chi của bạn.</p>
+    <div class="form-error" id="form-error" role="alert" hidden></div>
+    <fieldset class="kind-switch"><legend class="sr-only">Loại giao dịch</legend><label><input type="radio" name="kind" value="expense" checked><span><span data-icon="expense"></span>Khoản chi</span></label><label><input type="radio" name="kind" value="income"><span><span data-icon="income"></span>Khoản thu</span></label></fieldset>
+    <label class="form-field">Nội dung <span class="required">*</span><input name="title" id="entry-title" required maxlength="120" placeholder="Ví dụ: Ăn trưa, lương tháng…"></label>
+    <div class="form-grid"><label class="form-field">Số tiền (VND) <span class="required">*</span><input name="amount" id="entry-amount" type="number" min="1" max="999999999999" step="1" inputmode="numeric" required placeholder="0"><small id="amount-preview">Nhập số tiền nguyên, lớn hơn 0.</small></label><label class="form-field">Ngày giao dịch <span class="required">*</span><input name="date" id="entry-date" type="date" min="1900-01-01" max="2100-12-31" required></label></div>
+    <div class="form-grid"><label class="form-field">Danh mục <span class="required">*</span><select name="categoryId" id="entry-category" required></select></label><label class="form-field">Trạng thái <span class="required">*</span><select name="status" id="entry-status" required><option value="completed">Đã hoàn tất</option><option value="pending">Đang chờ</option></select></label></div>
+    <label class="form-field">Ghi chú <textarea name="notes" id="entry-notes" maxlength="500" rows="3" placeholder="Thêm thông tin nếu cần…"></textarea></label><div class="dialog-footer"><button class="button secondary close-dialog" type="button">Hủy</button><button class="button primary" type="submit" id="save-entry">Lưu giao dịch</button></div>
+  </form></dialog>
+  <dialog id="delete-dialog" aria-labelledby="delete-title"><div class="delete-icon" data-icon="trash"></div><h2 id="delete-title">Xóa giao dịch?</h2><p>Giao dịch <strong id="delete-name"></strong> sẽ được xóa khỏi sổ. Số liệu thống kê sẽ được tính lại.</p><div id="delete-error" class="form-error" role="alert" hidden></div><div class="dialog-footer"><button class="button secondary" id="cancel-delete">Giữ lại</button><button class="button danger" id="confirm-delete">Xóa giao dịch</button></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

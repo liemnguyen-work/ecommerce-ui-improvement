@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600">
+  <rect width="1100" height="600" fill="#f5f8f7"/>
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#1b302c">
+    <text x="60" y="58" font-size="28" font-weight="700">Sổ Thu Chi · Sơ đồ cơ sở dữ liệu</text>
+    <text x="60" y="88" font-size="16" fill="#6b7c77">SQLite · Một danh mục có nhiều giao dịch · Tiền lưu bằng số nguyên VND</text>
+    <rect x="60" y="140" width="340" height="310" rx="14" fill="white" stroke="#cdded3"/>
+    <path d="M74 140h312a14 14 0 0 1 14 14v48H60v-48a14 14 0 0 1 14-14" fill="#167454"/>
+    <text x="82" y="179" font-size="22" font-weight="700" fill="white">Categories</text>
+    <g font-size="18">
+      <text x="82" y="238">PK  Id : INTEGER</text>
+      <text x="82" y="279">Name : TEXT</text>
+      <text x="82" y="320">Kind : INTEGER</text>
+      <text x="82" y="361">Color : TEXT</text>
+      <text x="82" y="402">Icon : TEXT</text>
+    </g>
+    <rect x="620" y="140" width="420" height="394" rx="14" fill="white" stroke="#cdded3"/>
+    <path d="M634 140h392a14 14 0 0 1 14 14v48H620v-48a14 14 0 0 1 14-14" fill="#167454"/>
+    <text x="642" y="179" font-size="22" font-weight="700" fill="white">Entries</text>
+    <g font-size="18">
+      <text x="642" y="238">PK  Id : INTEGER</text>
+      <text x="642" y="275">Title : TEXT (tối đa 120 ký tự)</text>
+      <text x="642" y="312">Amount : INTEGER (lớn hơn 0)</text>
+      <text x="642" y="349">Date : TEXT (yyyy-MM-dd)</text>
+      <text x="642" y="386" font-weight="700" fill="#167454">FK  CategoryId → Categories.Id</text>
+      <text x="642" y="423">Status : INTEGER (0 chờ, 1 hoàn tất)</text>
+      <text x="642" y="460">Notes : TEXT (tối đa 500 ký tự)</text>
+      <text x="642" y="497">Revision : INTEGER (chống ghi đè)</text>
+    </g>
+    <path d="M400 238h95v148h125m-20-12 20 12-20 12m-200-172v24" fill="none" stroke="#167454" stroke-width="2"/>
+    <text x="417" y="224" font-size="18" font-weight="700">1</text>
+    <text x="574" y="369" font-size="18" font-weight="700">N</text>
+    <text x="60" y="565" font-size="16" fill="#6b7c77">Khóa ngoại bảo toàn danh mục. Thống kê chỉ cộng các giao dịch có Status = 1.</text>
+  </g>
+</svg>

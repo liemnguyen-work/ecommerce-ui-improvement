@@ -37,3 +37,14 @@ Các thư mục minh-chung cũ được giữ làm lịch sử. Sau bước th�
 Mã và tài liệu được tạo, kiểm tra với sự hỗ trợ của AI. Sinh viên đã bổ sung thao tác tự sửa theo hướng dẫn và gửi ảnh trước sau; xem THUC_HANH_CA_NHAN.md. Bảng đối chiếu ghi đúng phạm vi hỗ trợ và minh chứng. Chưa xác nhận triển khai lại GitHub Pages hoặc thử trên thiết bị vật lý.
 
 Repository: https://github.com/liemnguyen-work/ecommerce-ui-improvement. Tiếp tục dùng nhánh main và giữ lịch sử Buổi 1.
+
+## Bài thực hành Frontend và Backend — Sổ Thu Chi
+
+Ứng dụng quản lý thu chi cá nhân: thêm, sửa, xóa giao dịch, cập nhật trạng thái và thống kê. Sử dụng ASP.NET Core .NET 10, SQLite và HTML/CSS/JavaScript.
+
+- [Mã nguồn và hướng dẫn chạy](QuanLyThuChi/README.md).
+- [Tải toàn bộ bài dưới dạng ZIP](QuanLyThuChi/SoThuChi_31241023460.zip).
+- [Ảnh giao diện desktop và mobile](QuanLyThuChi/Design/README.md).
+- [Sơ đồ database](QuanLyThuChi/Database/ERD.svg) và [SQL tạo bảng](QuanLyThuChi/Database/schema.sql).
+
+Bài chạy cục bộ; database được tạo ở lần chạy đầu. Thư mục này bổ sung bài mới và giữ nguyên các bài thực hành trước.
